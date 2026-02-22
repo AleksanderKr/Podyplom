@@ -1,0 +1,47 @@
+1. Graph theory basics 1
+ https://www.geeksforgeeks.org/mathematics-graph-theory-basics-set-1/
+
+2. Graph theory basics 2
+https://www.geeksforgeeks.org/mathematics-graph-theory-basics/?ref=rp
+
+3. Betweenness Centrality
+https://www.geeksforgeeks.org/betweenness-centrality-centrality-measure/?ref=lbp 
+
+4. Graph measurements
+ https://www.geeksforgeeks.org/graph-measurements-length-distance-diameter-eccentricity-radius-center/ 
+
+5. Run and study the code (in the Google Colab)
+https://enauczanie.pg.edu.pl/moodle/mod/resource/view.php?id=1360305
+
+6. Run and study the code (in the Google Colab)
+https://enauczanie.pg.edu.pl/moodle/mod/resource/view.php?id=1360306
+
+7. Run and study the code (in the Google Colab)
+https://enauczanie.pg.edu.pl/moodle/mod/resource/view.php?id=1360307
+
+8. Perform the excecises
+https://enauczanie.pg.edu.pl/moodle/mod/resource/view.php?id=1360308
+https://enauczanie.pg.edu.pl/moodle/mod/resource/view.php?id=1360309
+
+9. Do the Assignment 1 and upload your report
+Do the Task1 (1.5 pkt) and the Task2 (0.5 pkt)
+Have you seen the Games of Thrones?
+
+10. Do the Assignement 2 and upload your report
+- Question no 1 (2 pkt)
+- Question no 2 (2 pkt)
+- Question no 3 (2 pkt)
+- Question no 4 (2 pkt)
+
+In total, for performing both assignemets correctly you can get 10 points.
+So let's get to work.
+
+
+
+
+
+
+
+
+
+

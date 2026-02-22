@@ -1,0 +1,4 @@
+help("data")
+data(zaki)
+summary(zaki)
+as(zaki, "data.frame")

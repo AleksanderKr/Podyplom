@@ -1,0 +1,26 @@
+Szanowni Państwo.
+Witam serdecznie na zajęciach poświęconych Zaawansowananym technikom eksploracji danych
+
+Dzisiaj rozpoczynają się pierwsze zajęcia.
+Tym samym, proszę zapoznać się z wykładem p. dr inż. Aleksandry Karpus pt."Eksploracyjna analiza danych i przygotowanie danych", dostępnym pod adresem:
+https://enauczanie.pg.edu.pl/moodle/pluginfile.php/2310887/mod_resource/content/4/zted1.pdf
+
+Następnie należy wykonać trzy zadania:
+1/ Ćwiczenia - wizualizacja
+https://enauczanie.pg.edu.pl/moodle/mod/assign/view.php?id=1566195
+
+2/ Zadanie 1
+https://enauczanie.pg.edu.pl/moodle/mod/assign/view.php?id=1566196
+
+3/ Zadanie 2
+https://enauczanie.pg.edu.pl/moodle/mod/assign/view.php?id=1566197
+
+Szczegółowe instrukcje znajdują się w załączonych notatnikach Jupytera.
+Ostateczny termin realizacji: 20 kwietnia 23:59.
+Łącznie można uzyskać za wykonanie zadań 10 punktów.
+
+W przypadku pytań,
+uprzejmie zapraszam do kontakt emailowego (pawel.weichbroth@pg.edu.pl).
+
+Pozdrawiam,
+Paweł Weichbroth

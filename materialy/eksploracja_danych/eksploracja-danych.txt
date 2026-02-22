@@ -1,0 +1,28 @@
+1. Powitanie.
+2. Sprawdzenie obecności.
+3. Zasady zaliczenia
+Część pierwsza jest już za Państwem.
+
+Cześć druga
+Sporządzenia trzech sprawozdań z drugiej części laboratoriów, 
+według instrukcji laboratoryjnych. 
+
+CZĘŚĆ I - ZROZUMIENIE PROBLEMU I ZROZUMIENIE DANYCH. 7 maja
+CZĘŚĆ II - PRZYGOTOWANIE DANYCH I MODELOWANIE. 21 maja
+CZĘŚĆ III - WALIDACJA WYNIKÓW I PRZEGLĄD PROJEKTU. 4 czerwca
+
+Każde ma po 20 pkt za każde sprawozdanie (60 pkt); 
+max. 100 pkt za lab.
+
+Dzielimy się na grupy 3-osobowe; 1 temat realizuje jedna grupa.
+
+Moodle:
+- wymagania co do zawartosci
+https://enauczanie.pg.edu.pl/moodle/pluginfile.php/782994/mod_resource/content/1/PierwszyEtapWymagania.pdf
+
+Moodle:
+- dane jakie są dostępne; omówić.
+
+Kaggle
+
+Jeżeli jest 18 osób w grupie to 6 grup robi prezentacje po 5 min na każdą

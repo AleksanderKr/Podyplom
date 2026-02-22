@@ -1,0 +1,1746 @@
+itemset_human,support_count,support
+almonds,153,0.020397
+body spray,86,0.011465
+spaghetti,1306,0.174110
+sparkling water,47,0.006266
+spinach,53,0.007066
+strawberries,160,0.021330
+strong cheese,58,0.007732
+tea,29,0.003866
+tomato juice,228,0.030396
+tomato sauce,106,0.014131
+tomatoes,513,0.068391
+toothpaste,61,0.008132
+turkey,469,0.062525
+vegetables mix,193,0.025730
+white wine,124,0.016531
+whole weat flour,70,0.009332
+whole wheat pasta,221,0.029463
+whole wheat rice,439,0.058526
+yams,86,0.011465
+yogurt cake,205,0.027330
+zucchini,71,0.009465
+brownies,253,0.033729
+bug spray,65,0.008666
+burger sauce,44,0.005866
+burgers,654,0.087188
+butter,226,0.030129
+cake,608,0.081056
+candy bars,73,0.009732
+carrots,115,0.015331
+antioxydant juice,67,0.008932
+cauliflower,36,0.004799
+cereals,193,0.025730
+champagne,351,0.046794
+chicken,450,0.059992
+chili,46,0.006133
+chocolate,1229,0.163845
+chocolate bread,32,0.004266
+chutney,31,0.004133
+cider,79,0.010532
+clothes accessories,63,0.008399
+asparagus,36,0.004799
+cookies,603,0.080389
+cooking oil,383,0.051060
+corn,36,0.004799
+cottage cheese,239,0.031862
+dessert wine,33,0.004399
+eggplant,99,0.013198
+eggs,1348,0.179709
+energy bar,203,0.027063
+energy drink,200,0.026663
+avocado,250,0.033329
+escalope,595,0.079323
+extra dark chocolate,90,0.011998
+flax seed,68,0.009065
+french fries,1282,0.170911
+french wine,169,0.022530
+fresh bread,323,0.043061
+fresh tuna,167,0.022264
+fromage blanc,102,0.013598
+frozen smoothie,475,0.063325
+frozen vegetables,715,0.095321
+babies food,34,0.004533
+gluten free bar,52,0.006932
+grated cheese,393,0.052393
+green beans,65,0.008666
+green grapes,68,0.009065
+green tea,991,0.132116
+ground beef,737,0.098254
+gums,101,0.013465
+ham,199,0.026530
+hand protein bar,39,0.005199
+herb & pepper,371,0.049460
+bacon,65,0.008666
+honey,356,0.047460
+hot dogs,243,0.032396
+ketchup,33,0.004399
+light cream,117,0.015598
+light mayo,204,0.027196
+low fat yogurt,574,0.076523
+magazines,82,0.010932
+mashed potato,31,0.004133
+mayonnaise,46,0.006133
+meatballs,157,0.020931
+barbecue sauce,81,0.010799
+melons,90,0.011998
+milk,972,0.129583
+mineral water,1788,0.238368
+mint,131,0.017464
+mint green tea,42,0.005599
+muffins,181,0.024130
+mushroom cream sauce,143,0.019064
+nonfat milk,78,0.010399
+oatmeal,33,0.004399
+black tea,107,0.014265
+oil,173,0.023064
+olive oil,494,0.065858
+pancakes,713,0.095054
+parmesan cheese,149,0.019864
+pasta,118,0.015731
+pepper,199,0.026530
+pet food,49,0.006532
+pickles,45,0.005999
+protein bar,139,0.018531
+red wine,211,0.028130
+blueberries,69,0.009199
+rice,141,0.018797
+salad,37,0.004933
+salmon,319,0.042528
+salt,69,0.009199
+sandwich,34,0.004533
+shallot,58,0.007732
+shampoo,37,0.004933
+shrimp,536,0.071457
+soda,47,0.006266
+soup,379,0.050527
+"almonds, spaghetti",45,0.005999
+"almonds, burgers",39,0.005199
+"almonds, cake",23,0.003066
+"almonds, chocolate",45,0.005999
+"almonds, eggs",49,0.006532
+"almonds, french fries",33,0.004399
+"almonds, frozen smoothie",21,0.002800
+"almonds, frozen vegetables",23,0.003066
+"almonds, green tea",38,0.005066
+"almonds, ground beef",29,0.003866
+"almonds, milk",39,0.005199
+"almonds, mineral water",57,0.007599
+"almonds, olive oil",22,0.002933
+"almonds, pancakes",23,0.003066
+"body spray, spaghetti",20,0.002666
+"body spray, french fries",32,0.004266
+"body spray, mineral water",31,0.004133
+"spaghetti, strawberries",31,0.004133
+"spaghetti, strong cheese",28,0.003733
+"spaghetti, tomato juice",56,0.007466
+"spaghetti, tomato sauce",47,0.006266
+"spaghetti, tomatoes",157,0.020931
+"spaghetti, turkey",124,0.016531
+"spaghetti, vegetables mix",42,0.005599
+"spaghetti, white wine",34,0.004533
+"spaghetti, whole wheat pasta",66,0.008799
+"spaghetti, whole wheat rice",106,0.014131
+"spaghetti, yogurt cake",29,0.003866
+"spaghetti, zucchini",23,0.003066
+"spaghetti, brownies",55,0.007332
+"spaghetti, bug spray",20,0.002666
+"spaghetti, burgers",161,0.021464
+"spaghetti, butter",47,0.006266
+"spaghetti, cake",136,0.018131
+"spaghetti, carrots",35,0.004666
+"spaghetti, cereals",50,0.006666
+"spaghetti, champagne",50,0.006666
+"spaghetti, chicken",129,0.017198
+"spaghetti, chocolate",294,0.039195
+"spaghetti, cookies",60,0.007999
+"spaghetti, cooking oil",119,0.015865
+"spaghetti, cottage cheese",52,0.006932
+"spaghetti, eggplant",29,0.003866
+"spaghetti, eggs",274,0.036528
+"spaghetti, energy bar",33,0.004399
+"spaghetti, energy drink",32,0.004266
+"spaghetti, avocado",60,0.007999
+"spaghetti, escalope",105,0.013998
+"spaghetti, extra dark chocolate",31,0.004133
+"spaghetti, french fries",207,0.027596
+"spaghetti, french wine",58,0.007732
+"spaghetti, fresh bread",68,0.009065
+"spaghetti, fresh tuna",51,0.006799
+"spaghetti, fromage blanc",28,0.003733
+"spaghetti, frozen smoothie",117,0.015598
+"spaghetti, frozen vegetables",209,0.027863
+"spaghetti, grated cheese",124,0.016531
+"spaghetti, green beans",26,0.003466
+"spaghetti, green tea",199,0.026530
+"spaghetti, ground beef",294,0.039195
+"spaghetti, gums",23,0.003066
+"spaghetti, ham",69,0.009199
+"spaghetti, herb & pepper",122,0.016264
+"spaghetti, bacon",24,0.003200
+"spaghetti, honey",89,0.011865
+"spaghetti, hot dogs",65,0.008666
+"spaghetti, light cream",40,0.005333
+"spaghetti, light mayo",29,0.003866
+"spaghetti, low fat yogurt",114,0.015198
+"spaghetti, meatballs",48,0.006399
+"spaghetti, milk",266,0.035462
+"spaghetti, mineral water",448,0.059725
+"spaghetti, mint",30,0.003999
+"spaghetti, muffins",27,0.003600
+"spaghetti, mushroom cream sauce",32,0.004266
+"spaghetti, nonfat milk",25,0.003333
+"spaghetti, black tea",34,0.004533
+"spaghetti, oil",43,0.005733
+"spaghetti, olive oil",172,0.022930
+"spaghetti, pancakes",189,0.025197
+"spaghetti, parmesan cheese",51,0.006799
+"spaghetti, pepper",74,0.009865
+"spaghetti, protein bar",38,0.005066
+"spaghetti, red wine",77,0.010265
+"spaghetti, blueberries",26,0.003466
+"spaghetti, rice",38,0.005066
+"spaghetti, salmon",101,0.013465
+"spaghetti, shrimp",159,0.021197
+"spaghetti, soup",107,0.014265
+"spinach, mineral water",20,0.002666
+"strawberries, chocolate",26,0.003466
+"strawberries, eggs",28,0.003733
+"strawberries, french fries",43,0.005733
+"strawberries, green tea",26,0.003466
+"strawberries, mineral water",38,0.005066
+"strong cheese, mineral water",24,0.003200
+"tomato juice, tomatoes",27,0.003600
+"tomato juice, turkey",24,0.003200
+"tomato juice, burgers",25,0.003333
+"tomato juice, cake",29,0.003866
+"tomato juice, chicken",25,0.003333
+"tomato juice, chocolate",44,0.005866
+"tomato juice, cooking oil",22,0.002933
+"tomato juice, eggs",38,0.005066
+"tomato juice, french fries",53,0.007066
+"tomato juice, fresh bread",32,0.004266
+"tomato juice, frozen smoothie",28,0.003733
+"tomato juice, frozen vegetables",37,0.004933
+"tomato juice, green tea",47,0.006266
+"tomato juice, ground beef",27,0.003600
+"tomato juice, honey",21,0.002800
+"tomato juice, low fat yogurt",27,0.003600
+"tomato juice, milk",43,0.005733
+"tomato juice, mineral water",72,0.009599
+"tomato juice, olive oil",21,0.002800
+"tomato juice, pancakes",37,0.004933
+"tomato juice, shrimp",27,0.003600
+"tomato juice, soup",21,0.002800
+"tomato sauce, chocolate",38,0.005066
+"tomato sauce, eggs",20,0.002666
+"tomato sauce, ground beef",40,0.005333
+"tomato sauce, milk",22,0.002933
+"tomato sauce, mineral water",43,0.005733
+"tomato sauce, olive oil",21,0.002800
+"tomatoes, turkey",49,0.006532
+"tomatoes, vegetables mix",24,0.003200
+"tomatoes, whole wheat rice",45,0.005999
+"tomatoes, brownies",22,0.002933
+"tomatoes, burgers",62,0.008266
+"tomatoes, butter",23,0.003066
+"tomatoes, cake",63,0.008399
+"tomatoes, champagne",20,0.002666
+"tomatoes, chicken",48,0.006399
+"tomatoes, chocolate",105,0.013998
+"tomatoes, cookies",22,0.002933
+"tomatoes, cooking oil",50,0.006666
+"tomatoes, eggs",92,0.012265
+"tomatoes, avocado",26,0.003466
+"tomatoes, escalope",41,0.005466
+"tomatoes, french fries",90,0.011998
+"tomatoes, fresh bread",35,0.004666
+"tomatoes, fresh tuna",21,0.002800
+"tomatoes, frozen smoothie",49,0.006532
+"tomatoes, frozen vegetables",121,0.016131
+"tomatoes, grated cheese",33,0.004399
+"tomatoes, green tea",92,0.012265
+"tomatoes, ground beef",88,0.011732
+"tomatoes, herb & pepper",33,0.004399
+"tomatoes, honey",40,0.005333
+"tomatoes, hot dogs",20,0.002666
+"tomatoes, low fat yogurt",45,0.005999
+"tomatoes, meatballs",29,0.003866
+"tomatoes, milk",105,0.013998
+"tomatoes, mineral water",183,0.024397
+"tomatoes, olive oil",54,0.007199
+"tomatoes, pancakes",74,0.009865
+"tomatoes, parmesan cheese",24,0.003200
+"tomatoes, salmon",37,0.004933
+"tomatoes, shrimp",84,0.011199
+"tomatoes, soup",52,0.006932
+"turkey, whole wheat rice",53,0.007066
+"turkey, burgers",80,0.010665
+"turkey, butter",22,0.002933
+"turkey, cake",52,0.006932
+"turkey, chicken",36,0.004799
+"turkey, chocolate",85,0.011332
+"turkey, cookies",20,0.002666
+"turkey, cooking oil",43,0.005733
+"turkey, eggs",146,0.019464
+"turkey, avocado",28,0.003733
+"turkey, escalope",32,0.004266
+"turkey, french fries",80,0.010665
+"turkey, fresh bread",24,0.003200
+"turkey, frozen smoothie",31,0.004133
+"turkey, frozen vegetables",66,0.008799
+"turkey, grated cheese",37,0.004933
+"turkey, green tea",89,0.011865
+"turkey, ground beef",69,0.009199
+"turkey, ham",23,0.003066
+"turkey, herb & pepper",36,0.004799
+"turkey, honey",43,0.005733
+"turkey, low fat yogurt",38,0.005066
+"turkey, meatballs",20,0.002666
+"turkey, milk",85,0.011332
+"turkey, mineral water",144,0.019197
+"turkey, olive oil",40,0.005333
+"turkey, pancakes",72,0.009599
+"turkey, pepper",29,0.003866
+"turkey, red wine",22,0.002933
+"turkey, salmon",31,0.004133
+"turkey, shrimp",48,0.006399
+"turkey, soup",37,0.004933
+"vegetables mix, burgers",21,0.002800
+"vegetables mix, chocolate",36,0.004799
+"vegetables mix, eggs",36,0.004799
+"vegetables mix, escalope",21,0.002800
+"vegetables mix, french fries",42,0.005599
+"vegetables mix, frozen smoothie",25,0.003333
+"vegetables mix, frozen vegetables",33,0.004399
+"vegetables mix, green tea",38,0.005066
+"vegetables mix, milk",33,0.004399
+"vegetables mix, mineral water",59,0.007866
+"vegetables mix, pancakes",27,0.003600
+"vegetables mix, salmon",21,0.002800
+"vegetables mix, shrimp",20,0.002666
+"white wine, chocolate",26,0.003466
+"white wine, green tea",20,0.002666
+"white wine, milk",26,0.003466
+"white wine, mineral water",33,0.004399
+"whole weat flour, mineral water",26,0.003466
+"whole wheat pasta, burgers",28,0.003733
+"whole wheat pasta, cake",27,0.003600
+"whole wheat pasta, chicken",25,0.003333
+"whole wheat pasta, chocolate",47,0.006266
+"whole wheat pasta, eggs",37,0.004933
+"whole wheat pasta, french fries",41,0.005466
+"whole wheat pasta, frozen vegetables",37,0.004933
+"whole wheat pasta, green tea",39,0.005199
+"whole wheat pasta, ground beef",34,0.004533
+"whole wheat pasta, herb & pepper",28,0.003733
+"whole wheat pasta, milk",74,0.009865
+"whole wheat pasta, mineral water",72,0.009599
+"whole wheat pasta, olive oil",60,0.007999
+"whole wheat pasta, pancakes",35,0.004666
+"whole wheat pasta, shrimp",26,0.003466
+"whole wheat rice, burgers",67,0.008932
+"whole wheat rice, butter",24,0.003200
+"whole wheat rice, cake",58,0.007732
+"whole wheat rice, champagne",23,0.003066
+"whole wheat rice, chicken",41,0.005466
+"whole wheat rice, chocolate",90,0.011998
+"whole wheat rice, cookies",30,0.003999
+"whole wheat rice, cooking oil",41,0.005466
+"whole wheat rice, eggs",82,0.010932
+"whole wheat rice, avocado",29,0.003866
+"whole wheat rice, escalope",39,0.005199
+"whole wheat rice, french fries",79,0.010532
+"whole wheat rice, fresh bread",28,0.003733
+"whole wheat rice, frozen smoothie",45,0.005999
+"whole wheat rice, frozen vegetables",68,0.009065
+"whole wheat rice, grated cheese",34,0.004533
+"whole wheat rice, green tea",68,0.009065
+"whole wheat rice, ground beef",61,0.008132
+"whole wheat rice, ham",32,0.004266
+"whole wheat rice, herb & pepper",25,0.003333
+"whole wheat rice, honey",29,0.003866
+"whole wheat rice, low fat yogurt",49,0.006532
+"whole wheat rice, milk",89,0.011865
+"whole wheat rice, mineral water",151,0.020131
+"whole wheat rice, olive oil",26,0.003466
+"whole wheat rice, pancakes",52,0.006932
+"whole wheat rice, salmon",21,0.002800
+"whole wheat rice, shrimp",44,0.005866
+"whole wheat rice, soup",27,0.003600
+"yams, ground beef",20,0.002666
+"yams, mineral water",27,0.003600
+"yogurt cake, cake",20,0.002666
+"yogurt cake, chocolate",33,0.004399
+"yogurt cake, eggs",34,0.004533
+"yogurt cake, french fries",38,0.005066
+"yogurt cake, green tea",29,0.003866
+"yogurt cake, milk",24,0.003200
+"yogurt cake, mineral water",42,0.005599
+"yogurt cake, pancakes",27,0.003600
+"zucchini, chocolate",21,0.002800
+"zucchini, mineral water",26,0.003466
+"brownies, burgers",25,0.003333
+"brownies, cake",41,0.005466
+"brownies, chicken",20,0.002666
+"brownies, chocolate",37,0.004933
+"brownies, cooking oil",22,0.002933
+"brownies, cottage cheese",26,0.003466
+"brownies, eggs",55,0.007332
+"brownies, energy drink",20,0.002666
+"brownies, french fries",59,0.007866
+"brownies, frozen smoothie",20,0.002666
+"brownies, frozen vegetables",33,0.004399
+"brownies, green tea",50,0.006666
+"brownies, ground beef",37,0.004933
+"brownies, honey",20,0.002666
+"brownies, hot dogs",20,0.002666
+"brownies, low fat yogurt",24,0.003200
+"brownies, milk",41,0.005466
+"brownies, mineral water",72,0.009599
+"brownies, olive oil",28,0.003733
+"brownies, pancakes",41,0.005466
+"brownies, shrimp",24,0.003200
+"bug spray, mineral water",20,0.002666
+"burgers, butter",23,0.003066
+"burgers, cake",86,0.011465
+"burgers, carrots",20,0.002666
+"burgers, cereals",26,0.003466
+"burgers, champagne",29,0.003866
+"burgers, chicken",47,0.006266
+"burgers, chocolate",128,0.017064
+"burgers, cookies",42,0.005599
+"burgers, cooking oil",43,0.005733
+"burgers, cottage cheese",25,0.003333
+"burgers, eggs",216,0.028796
+"burgers, energy bar",21,0.002800
+"burgers, avocado",34,0.004533
+"burgers, escalope",53,0.007066
+"burgers, french fries",165,0.021997
+"burgers, french wine",31,0.004133
+"burgers, fresh bread",30,0.003999
+"burgers, fresh tuna",27,0.003600
+"burgers, frozen smoothie",54,0.007199
+"burgers, frozen vegetables",79,0.010532
+"burgers, grated cheese",41,0.005466
+"burgers, green tea",131,0.017464
+"burgers, ground beef",90,0.011998
+"burgers, ham",42,0.005599
+"burgers, herb & pepper",31,0.004133
+"burgers, honey",47,0.006266
+"burgers, hot dogs",29,0.003866
+"burgers, light mayo",25,0.003333
+"burgers, low fat yogurt",50,0.006666
+"burgers, milk",134,0.017864
+"burgers, mineral water",183,0.024397
+"burgers, oil",20,0.002666
+"burgers, olive oil",48,0.006399
+"burgers, pancakes",79,0.010532
+"burgers, red wine",28,0.003733
+"burgers, salmon",34,0.004533
+"burgers, shrimp",66,0.008799
+"burgers, soup",47,0.006266
+"butter, cake",22,0.002933
+"butter, chicken",32,0.004266
+"butter, chocolate",62,0.008266
+"butter, cooking oil",23,0.003066
+"butter, eggs",46,0.006133
+"butter, french fries",46,0.006133
+"butter, frozen vegetables",29,0.003866
+"butter, grated cheese",23,0.003066
+"butter, green tea",55,0.007332
+"butter, ground beef",29,0.003866
+"butter, low fat yogurt",33,0.004399
+"butter, milk",46,0.006133
+"butter, mineral water",23,0.003066
+"butter, pancakes",31,0.004133
+"butter, shrimp",28,0.003733
+"cake, cereals",23,0.003066
+"cake, chicken",49,0.006532
+"cake, chocolate",102,0.013598
+"cake, cookies",30,0.003999
+"cake, cooking oil",37,0.004933
+"cake, cottage cheese",33,0.004399
+"cake, eggs",143,0.019064
+"cake, energy bar",24,0.003200
+"cake, energy drink",27,0.003600
+"cake, avocado",32,0.004266
+"cake, escalope",31,0.004133
+"cake, french fries",134,0.017864
+"cake, fresh bread",33,0.004399
+"cake, fresh tuna",28,0.003733
+"cake, frozen smoothie",48,0.006399
+"cake, frozen vegetables",77,0.010265
+"cake, grated cheese",36,0.004799
+"cake, green tea",106,0.014131
+"cake, ground beef",61,0.008132
+"cake, ham",20,0.002666
+"cake, herb & pepper",34,0.004533
+"cake, honey",33,0.004399
+"cake, hot dogs",27,0.003600
+"cake, low fat yogurt",52,0.006932
+"cake, milk",100,0.013332
+"cake, mineral water",206,0.027463
+"cake, olive oil",49,0.006532
+"cake, pancakes",89,0.011865
+"cake, parmesan cheese",23,0.003066
+"cake, red wine",24,0.003200
+"cake, salmon",28,0.003733
+"cake, shrimp",57,0.007599
+"cake, soup",46,0.006133
+"carrots, chocolate",26,0.003466
+"carrots, eggs",22,0.002933
+"carrots, frozen vegetables",20,0.002666
+"carrots, green tea",27,0.003600
+"carrots, milk",22,0.002933
+"carrots, mineral water",40,0.005333
+"antioxydant juice, mineral water",20,0.002666
+"cereals, chicken",20,0.002666
+"cereals, chocolate",42,0.005599
+"cereals, cooking oil",22,0.002933
+"cereals, eggs",28,0.003733
+"cereals, french fries",36,0.004799
+"cereals, fresh bread",21,0.002800
+"cereals, frozen vegetables",32,0.004266
+"cereals, green tea",49,0.006532
+"cereals, ground beef",34,0.004533
+"cereals, herb & pepper",24,0.003200
+"cereals, low fat yogurt",20,0.002666
+"cereals, milk",53,0.007066
+"cereals, mineral water",77,0.010265
+"cereals, olive oil",22,0.002933
+"cereals, pancakes",35,0.004666
+"cereals, shrimp",24,0.003200
+"champagne, chocolate",87,0.011598
+"champagne, cookies",28,0.003733
+"champagne, eggs",50,0.006666
+"champagne, escalope",30,0.003999
+"champagne, french fries",70,0.009332
+"champagne, fresh bread",20,0.002666
+"champagne, frozen smoothie",35,0.004666
+"champagne, frozen vegetables",36,0.004799
+"champagne, green tea",62,0.008266
+"champagne, ground beef",30,0.003999
+"champagne, low fat yogurt",24,0.003200
+"champagne, milk",40,0.005333
+"champagne, mineral water",56,0.007466
+"champagne, pancakes",38,0.005066
+"chicken, chocolate",110,0.014665
+"chicken, cooking oil",51,0.006799
+"chicken, cottage cheese",24,0.003200
+"chicken, eggs",108,0.014398
+"chicken, avocado",20,0.002666
+"chicken, escalope",27,0.003600
+"chicken, extra dark chocolate",21,0.002800
+"chicken, french fries",83,0.011065
+"chicken, fresh bread",39,0.005199
+"chicken, fresh tuna",20,0.002666
+"chicken, frozen smoothie",50,0.006666
+"chicken, frozen vegetables",67,0.008932
+"chicken, grated cheese",32,0.004266
+"chicken, green tea",89,0.011865
+"chicken, ground beef",71,0.009465
+"chicken, ham",20,0.002666
+"chicken, herb & pepper",37,0.004933
+"chicken, honey",31,0.004133
+"chicken, hot dogs",23,0.003066
+"chicken, light cream",34,0.004533
+"chicken, low fat yogurt",33,0.004399
+"chicken, meatballs",24,0.003200
+"chicken, milk",111,0.014798
+"chicken, mineral water",171,0.022797
+"chicken, oil",20,0.002666
+"chicken, olive oil",54,0.007199
+"chicken, pancakes",68,0.009065
+"chicken, salmon",30,0.003999
+"chicken, shrimp",47,0.006266
+"chicken, soup",45,0.005999
+"chocolate, cookies",78,0.010399
+"chocolate, cooking oil",102,0.013598
+"chocolate, cottage cheese",37,0.004933
+"chocolate, eggs",249,0.033196
+"chocolate, energy bar",30,0.003999
+"chocolate, energy drink",26,0.003466
+"chocolate, avocado",53,0.007066
+"chocolate, escalope",132,0.017598
+"chocolate, french fries",258,0.034395
+"chocolate, french wine",39,0.005199
+"chocolate, fresh bread",71,0.009465
+"chocolate, fresh tuna",36,0.004799
+"chocolate, fromage blanc",23,0.003066
+"chocolate, frozen smoothie",112,0.014931
+"chocolate, frozen vegetables",172,0.022930
+"chocolate, grated cheese",82,0.010932
+"chocolate, green tea",176,0.023464
+"chocolate, ground beef",173,0.023064
+"chocolate, ham",47,0.006266
+"chocolate, herb & pepper",68,0.009065
+"chocolate, honey",60,0.007999
+"chocolate, hot dogs",41,0.005466
+"chocolate, light cream",27,0.003600
+"chocolate, light mayo",38,0.005066
+"chocolate, low fat yogurt",111,0.014798
+"chocolate, milk",241,0.032129
+"chocolate, mineral water",395,0.052660
+"chocolate, mint",25,0.003333
+"chocolate, muffins",30,0.003999
+"chocolate, mushroom cream sauce",33,0.004399
+"chocolate, black tea",21,0.002800
+"chocolate, oil",46,0.006133
+"chocolate, olive oil",123,0.016398
+"chocolate, pancakes",149,0.019864
+"chocolate, parmesan cheese",32,0.004266
+"chocolate, pepper",48,0.006399
+"chocolate, protein bar",23,0.003066
+"chocolate, red wine",37,0.004933
+"chocolate, rice",40,0.005333
+"chocolate, salmon",80,0.010665
+"chocolate, shrimp",135,0.017998
+"chocolate, soup",76,0.010132
+"cider, eggs",32,0.004266
+"cider, french fries",22,0.002933
+"cider, milk",25,0.003333
+"cider, mineral water",20,0.002666
+"clothes accessories, mineral water",20,0.002666
+"cookies, eggs",79,0.010532
+"cookies, french fries",100,0.013332
+"cookies, fresh bread",20,0.002666
+"cookies, frozen smoothie",23,0.003066
+"cookies, grated cheese",21,0.002800
+"cookies, green tea",90,0.011998
+"cookies, ground beef",33,0.004399
+"cookies, low fat yogurt",40,0.005333
+"cookies, milk",33,0.004399
+"cookies, mineral water",56,0.007466
+"cookies, pancakes",39,0.005199
+"cookies, shrimp",31,0.004133
+"cooking oil, eggs",88,0.011732
+"cooking oil, escalope",40,0.005333
+"cooking oil, french fries",59,0.007866
+"cooking oil, fresh bread",22,0.002933
+"cooking oil, frozen smoothie",36,0.004799
+"cooking oil, frozen vegetables",51,0.006799
+"cooking oil, grated cheese",43,0.005733
+"cooking oil, green tea",53,0.007066
+"cooking oil, ground beef",63,0.008399
+"cooking oil, herb & pepper",40,0.005333
+"cooking oil, honey",25,0.003333
+"cooking oil, light cream",21,0.002800
+"cooking oil, low fat yogurt",49,0.006532
+"cooking oil, milk",86,0.011465
+"cooking oil, mineral water",151,0.020131
+"cooking oil, oil",20,0.002666
+"cooking oil, olive oil",38,0.005066
+"cooking oil, pancakes",59,0.007866
+"cooking oil, salmon",29,0.003866
+"cooking oil, shrimp",45,0.005999
+"cooking oil, soup",40,0.005333
+"cottage cheese, eggs",42,0.005599
+"cottage cheese, french fries",44,0.005866
+"cottage cheese, fresh bread",20,0.002666
+"cottage cheese, frozen smoothie",37,0.004933
+"cottage cheese, frozen vegetables",31,0.004133
+"cottage cheese, green tea",48,0.006399
+"cottage cheese, ground beef",23,0.003066
+"cottage cheese, honey",21,0.002800
+"cottage cheese, low fat yogurt",20,0.002666
+"cottage cheese, milk",35,0.004666
+"cottage cheese, mineral water",72,0.009599
+"cottage cheese, olive oil",26,0.003466
+"cottage cheese, pancakes",39,0.005199
+"cottage cheese, shrimp",20,0.002666
+"eggplant, eggs",27,0.003600
+"eggplant, green tea",20,0.002666
+"eggplant, mineral water",28,0.003733
+"eggs, energy bar",39,0.005199
+"eggs, energy drink",37,0.004933
+"eggs, avocado",42,0.005599
+"eggs, escalope",83,0.011065
+"eggs, french fries",273,0.036395
+"eggs, french wine",45,0.005999
+"eggs, fresh bread",65,0.008666
+"eggs, fresh tuna",44,0.005866
+"eggs, fromage blanc",30,0.003999
+"eggs, frozen smoothie",83,0.011065
+"eggs, frozen vegetables",163,0.021730
+"eggs, grated cheese",68,0.009065
+"eggs, green tea",191,0.025463
+"eggs, ground beef",150,0.019997
+"eggs, gums",20,0.002666
+"eggs, ham",47,0.006266
+"eggs, herb & pepper",94,0.012532
+"eggs, bacon",22,0.002933
+"eggs, honey",43,0.005733
+"eggs, hot dogs",27,0.003600
+"eggs, light cream",25,0.003333
+"eggs, light mayo",41,0.005466
+"eggs, low fat yogurt",126,0.016798
+"eggs, meatballs",33,0.004399
+"eggs, barbecue sauce",27,0.003600
+"eggs, milk",231,0.030796
+"eggs, mineral water",382,0.050927
+"eggs, mint",22,0.002933
+"eggs, muffins",26,0.003466
+"eggs, mushroom cream sauce",26,0.003466
+"eggs, black tea",37,0.004933
+"eggs, oil",26,0.003466
+"eggs, olive oil",90,0.011998
+"eggs, pancakes",163,0.021730
+"eggs, parmesan cheese",34,0.004533
+"eggs, pasta",21,0.002800
+"eggs, pepper",35,0.004666
+"eggs, protein bar",25,0.003333
+"eggs, red wine",53,0.007066
+"eggs, rice",23,0.003066
+"eggs, salmon",62,0.008266
+"eggs, shrimp",106,0.014131
+"eggs, soup",68,0.009065
+"energy bar, french fries",36,0.004799
+"energy bar, frozen vegetables",31,0.004133
+"energy bar, green tea",23,0.003066
+"energy bar, ground beef",20,0.002666
+"energy bar, milk",41,0.005466
+"energy bar, mineral water",51,0.006799
+"energy bar, pancakes",20,0.002666
+"energy drink, french fries",46,0.006133
+"energy drink, frozen vegetables",21,0.002800
+"energy drink, green tea",30,0.003999
+"energy drink, milk",25,0.003333
+"energy drink, mineral water",42,0.005599
+"energy drink, pancakes",28,0.003733
+"energy drink, shrimp",21,0.002800
+"avocado, french fries",60,0.007999
+"avocado, frozen smoothie",38,0.005066
+"avocado, frozen vegetables",35,0.004666
+"avocado, green tea",47,0.006266
+"avocado, ground beef",28,0.003733
+"avocado, honey",24,0.003200
+"avocado, milk",56,0.007466
+"avocado, mineral water",87,0.011598
+"avocado, olive oil",26,0.003466
+"avocado, pancakes",33,0.004399
+"avocado, shrimp",23,0.003066
+"avocado, soup",33,0.004399
+"escalope, french fries",123,0.016398
+"escalope, fresh bread",27,0.003600
+"escalope, frozen smoothie",41,0.005466
+"escalope, frozen vegetables",57,0.007599
+"escalope, grated cheese",36,0.004799
+"escalope, green tea",67,0.008932
+"escalope, ground beef",62,0.008266
+"escalope, herb & pepper",27,0.003600
+"escalope, honey",29,0.003866
+"escalope, hot dogs",20,0.002666
+"escalope, low fat yogurt",35,0.004666
+"escalope, milk",58,0.007732
+"escalope, mineral water",128,0.017064
+"escalope, mushroom cream sauce",43,0.005733
+"escalope, pancakes",44,0.005866
+"escalope, pasta",44,0.005866
+"escalope, pepper",23,0.003066
+"escalope, salmon",25,0.003333
+"escalope, shrimp",32,0.004266
+"escalope, soup",26,0.003466
+"extra dark chocolate, mineral water",43,0.005733
+"extra dark chocolate, olive oil",20,0.002666
+"flax seed, green tea",23,0.003066
+"french fries, french wine",28,0.003733
+"french fries, fresh bread",62,0.008266
+"french fries, fresh tuna",29,0.003866
+"french fries, fromage blanc",28,0.003733
+"french fries, frozen smoothie",109,0.014531
+"french fries, frozen vegetables",143,0.019064
+"french fries, grated cheese",78,0.010399
+"french fries, green beans",20,0.002666
+"french fries, green tea",214,0.028530
+"french fries, ground beef",104,0.013865
+"french fries, gums",20,0.002666
+"french fries, ham",42,0.005599
+"french fries, herb & pepper",52,0.006932
+"french fries, honey",67,0.008932
+"french fries, hot dogs",55,0.007332
+"french fries, light mayo",55,0.007332
+"french fries, low fat yogurt",100,0.013332
+"french fries, meatballs",23,0.003066
+"french fries, milk",178,0.023730
+"french fries, mineral water",253,0.033729
+"french fries, muffins",40,0.005333
+"french fries, mushroom cream sauce",35,0.004666
+"french fries, oil",30,0.003999
+"french fries, olive oil",69,0.009199
+"french fries, pancakes",151,0.020131
+"french fries, parmesan cheese",22,0.002933
+"french fries, pasta",23,0.003066
+"french fries, pepper",29,0.003866
+"french fries, protein bar",26,0.003466
+"french fries, red wine",40,0.005333
+"french fries, rice",36,0.004799
+"french fries, salmon",44,0.005866
+"french fries, shallot",20,0.002666
+"french fries, shrimp",75,0.009999
+"french fries, soup",57,0.007599
+"french wine, fresh bread",21,0.002800
+"french wine, frozen smoothie",21,0.002800
+"french wine, frozen vegetables",24,0.003200
+"french wine, green tea",27,0.003600
+"french wine, ground beef",29,0.003866
+"french wine, milk",37,0.004933
+"french wine, mineral water",62,0.008266
+"french wine, olive oil",26,0.003466
+"french wine, pancakes",31,0.004133
+"fresh bread, frozen smoothie",32,0.004266
+"fresh bread, frozen vegetables",51,0.006799
+"fresh bread, grated cheese",23,0.003066
+"fresh bread, green tea",48,0.006399
+"fresh bread, ground beef",46,0.006133
+"fresh bread, herb & pepper",23,0.003066
+"fresh bread, honey",20,0.002666
+"fresh bread, hot dogs",22,0.002933
+"fresh bread, low fat yogurt",32,0.004266
+"fresh bread, milk",69,0.009199
+"fresh bread, mineral water",100,0.013332
+"fresh bread, olive oil",38,0.005066
+"fresh bread, pancakes",40,0.005333
+"fresh bread, salmon",21,0.002800
+"fresh bread, shrimp",39,0.005199
+"fresh bread, soup",20,0.002666
+"fresh tuna, frozen smoothie",22,0.002933
+"fresh tuna, frozen vegetables",31,0.004133
+"fresh tuna, green tea",24,0.003200
+"fresh tuna, honey",30,0.003999
+"fresh tuna, milk",36,0.004799
+"fresh tuna, mineral water",66,0.008799
+"fresh tuna, olive oil",28,0.003733
+"fresh tuna, pancakes",38,0.005066
+"fromage blanc, frozen vegetables",20,0.002666
+"fromage blanc, honey",25,0.003333
+"fromage blanc, mineral water",34,0.004533
+"frozen smoothie, frozen vegetables",75,0.009999
+"frozen smoothie, grated cheese",24,0.003200
+"frozen smoothie, green tea",84,0.011199
+"frozen smoothie, ground beef",57,0.007599
+"frozen smoothie, ham",21,0.002800
+"frozen smoothie, herb & pepper",28,0.003733
+"frozen smoothie, honey",44,0.005866
+"frozen smoothie, hot dogs",36,0.004799
+"frozen smoothie, light mayo",24,0.003200
+"frozen smoothie, low fat yogurt",55,0.007332
+"frozen smoothie, milk",107,0.014265
+"frozen smoothie, mineral water",152,0.020264
+"frozen smoothie, oil",21,0.002800
+"frozen smoothie, olive oil",52,0.006932
+"frozen smoothie, pancakes",68,0.009065
+"frozen smoothie, pepper",22,0.002933
+"frozen smoothie, salmon",38,0.005066
+"frozen smoothie, shrimp",55,0.007332
+"frozen vegetables, grated cheese",51,0.006799
+"frozen vegetables, green tea",108,0.014398
+"frozen vegetables, ground beef",127,0.016931
+"frozen vegetables, ham",22,0.002933
+"frozen vegetables, herb & pepper",45,0.005999
+"frozen vegetables, honey",57,0.007599
+"frozen vegetables, hot dogs",30,0.003999
+"frozen vegetables, light mayo",33,0.004399
+"frozen vegetables, low fat yogurt",76,0.010132
+"frozen vegetables, meatballs",23,0.003066
+"frozen vegetables, milk",177,0.023597
+"frozen vegetables, mineral water",268,0.035729
+"frozen vegetables, muffins",27,0.003600
+"frozen vegetables, olive oil",85,0.011332
+"frozen vegetables, pancakes",101,0.013465
+"frozen vegetables, parmesan cheese",41,0.005466
+"frozen vegetables, pepper",21,0.002800
+"frozen vegetables, salmon",47,0.006266
+"frozen vegetables, shrimp",125,0.016664
+"frozen vegetables, soup",60,0.007999
+"grated cheese, green tea",59,0.007866
+"grated cheese, ground beef",85,0.011332
+"grated cheese, herb & pepper",49,0.006532
+"grated cheese, honey",31,0.004133
+"grated cheese, low fat yogurt",42,0.005599
+"grated cheese, milk",59,0.007866
+"grated cheese, mineral water",131,0.017464
+"grated cheese, olive oil",47,0.006266
+"grated cheese, pancakes",52,0.006932
+"grated cheese, salmon",39,0.005199
+"grated cheese, shrimp",33,0.004399
+"grated cheese, soup",22,0.002933
+"green grapes, mineral water",24,0.003200
+"green tea, ground beef",111,0.014798
+"green tea, gums",24,0.003200
+"green tea, ham",37,0.004933
+"green tea, herb & pepper",48,0.006399
+"green tea, honey",70,0.009332
+"green tea, hot dogs",50,0.006666
+"green tea, light mayo",33,0.004399
+"green tea, low fat yogurt",57,0.007599
+"green tea, magazines",22,0.002933
+"green tea, meatballs",26,0.003466
+"green tea, milk",132,0.017598
+"green tea, mineral water",233,0.031063
+"green tea, mint",22,0.002933
+"green tea, muffins",20,0.002666
+"green tea, mushroom cream sauce",27,0.003600
+"green tea, black tea",22,0.002933
+"green tea, oil",31,0.004133
+"green tea, olive oil",75,0.009999
+"green tea, pancakes",123,0.016398
+"green tea, parmesan cheese",20,0.002666
+"green tea, pepper",39,0.005199
+"green tea, protein bar",22,0.002933
+"green tea, red wine",35,0.004666
+"green tea, rice",25,0.003333
+"green tea, salmon",44,0.005866
+"green tea, shrimp",86,0.011465
+"green tea, soup",53,0.007066
+"ground beef, ham",37,0.004933
+"ground beef, herb & pepper",120,0.015998
+"ground beef, honey",51,0.006799
+"ground beef, hot dogs",29,0.003866
+"ground beef, light cream",25,0.003333
+"ground beef, light mayo",20,0.002666
+"ground beef, low fat yogurt",72,0.009599
+"ground beef, meatballs",24,0.003200
+"ground beef, milk",165,0.021997
+"ground beef, mineral water",307,0.040928
+"ground beef, oil",29,0.003866
+"ground beef, olive oil",106,0.014131
+"ground beef, pancakes",109,0.014531
+"ground beef, parmesan cheese",27,0.003600
+"ground beef, pepper",49,0.006532
+"ground beef, protein bar",27,0.003600
+"ground beef, red wine",36,0.004799
+"ground beef, rice",33,0.004399
+"ground beef, salmon",67,0.008932
+"ground beef, shrimp",86,0.011465
+"ground beef, soup",73,0.009732
+"gums, mineral water",37,0.004933
+"ham, low fat yogurt",22,0.002933
+"ham, milk",37,0.004933
+"ham, mineral water",69,0.009199
+"ham, olive oil",27,0.003600
+"ham, pancakes",34,0.004533
+"ham, shrimp",20,0.002666
+"herb & pepper, honey",24,0.003200
+"herb & pepper, low fat yogurt",44,0.005866
+"herb & pepper, milk",69,0.009199
+"herb & pepper, mineral water",128,0.017064
+"herb & pepper, olive oil",38,0.005066
+"herb & pepper, pancakes",55,0.007332
+"herb & pepper, rice",22,0.002933
+"herb & pepper, salmon",29,0.003866
+"herb & pepper, shrimp",53,0.007066
+"herb & pepper, soup",27,0.003600
+"bacon, mineral water",23,0.003066
+"honey, low fat yogurt",30,0.003999
+"honey, milk",58,0.007732
+"honey, mineral water",113,0.015065
+"honey, olive oil",36,0.004799
+"honey, pancakes",50,0.006666
+"honey, salmon",26,0.003466
+"honey, shrimp",33,0.004399
+"honey, soup",24,0.003200
+"hot dogs, milk",33,0.004399
+"hot dogs, mineral water",69,0.009199
+"hot dogs, olive oil",23,0.003066
+"hot dogs, pancakes",32,0.004266
+"light cream, milk",30,0.003999
+"light cream, mineral water",55,0.007332
+"light cream, olive oil",24,0.003200
+"light cream, pancakes",26,0.003466
+"light mayo, milk",26,0.003466
+"light mayo, mineral water",47,0.006266
+"light mayo, pancakes",41,0.005466
+"low fat yogurt, milk",99,0.013198
+"low fat yogurt, mineral water",180,0.023997
+"low fat yogurt, oil",20,0.002666
+"low fat yogurt, olive oil",51,0.006799
+"low fat yogurt, pancakes",71,0.009465
+"low fat yogurt, pepper",21,0.002800
+"low fat yogurt, salmon",29,0.003866
+"low fat yogurt, shrimp",47,0.006266
+"low fat yogurt, soup",43,0.005733
+"magazines, mineral water",28,0.003733
+"mayonnaise, mineral water",22,0.002933
+"meatballs, milk",41,0.005466
+"meatballs, mineral water",58,0.007732
+"meatballs, shrimp",20,0.002666
+"barbecue sauce, mineral water",29,0.003866
+"melons, mineral water",21,0.002800
+"milk, mineral water",360,0.047994
+"milk, mint",24,0.003200
+"milk, muffins",23,0.003066
+"milk, nonfat milk",20,0.002666
+"milk, black tea",32,0.004266
+"milk, oil",31,0.004133
+"milk, olive oil",128,0.017064
+"milk, pancakes",124,0.016531
+"milk, parmesan cheese",29,0.003866
+"milk, pepper",38,0.005066
+"milk, protein bar",22,0.002933
+"milk, red wine",30,0.003999
+"milk, rice",21,0.002800
+"milk, salmon",73,0.009732
+"milk, shrimp",132,0.017598
+"milk, soup",114,0.015198
+"mineral water, mint",44,0.005866
+"mineral water, muffins",33,0.004399
+"mineral water, mushroom cream sauce",22,0.002933
+"mineral water, nonfat milk",38,0.005066
+"mineral water, black tea",40,0.005333
+"mineral water, oil",55,0.007332
+"mineral water, olive oil",207,0.027596
+"mineral water, pancakes",253,0.033729
+"mineral water, parmesan cheese",35,0.004666
+"mineral water, pepper",62,0.008266
+"mineral water, protein bar",58,0.007732
+"mineral water, red wine",82,0.010932
+"mineral water, blueberries",27,0.003600
+"mineral water, rice",58,0.007732
+"mineral water, salmon",128,0.017064
+"mineral water, shrimp",177,0.023597
+"mineral water, soup",173,0.023064
+"mushroom cream sauce, pasta",20,0.002666
+"oil, olive oil",21,0.002800
+"oil, pancakes",28,0.003733
+"oil, shrimp",26,0.003466
+"olive oil, pancakes",81,0.010799
+"olive oil, pepper",24,0.003200
+"olive oil, salmon",43,0.005733
+"olive oil, shrimp",61,0.008132
+"olive oil, soup",67,0.008932
+"pancakes, parmesan cheese",20,0.002666
+"pancakes, pepper",36,0.004799
+"pancakes, red wine",26,0.003466
+"pancakes, salmon",32,0.004266
+"pancakes, shrimp",79,0.010532
+"pancakes, soup",51,0.006799
+"parmesan cheese, shrimp",25,0.003333
+"pasta, shrimp",38,0.005066
+"pepper, shrimp",26,0.003466
+"salmon, shrimp",35,0.004666
+"salmon, soup",24,0.003200
+"shrimp, soup",42,0.005599
+"spaghetti, tomato juice, mineral water",22,0.002933
+"spaghetti, tomato sauce, chocolate",21,0.002800
+"spaghetti, tomato sauce, ground beef",23,0.003066
+"spaghetti, tomatoes, turkey",22,0.002933
+"spaghetti, tomatoes, whole wheat rice",23,0.003066
+"spaghetti, tomatoes, cake",26,0.003466
+"spaghetti, tomatoes, chicken",22,0.002933
+"spaghetti, tomatoes, chocolate",37,0.004933
+"spaghetti, tomatoes, eggs",27,0.003600
+"spaghetti, tomatoes, french fries",27,0.003600
+"spaghetti, tomatoes, frozen smoothie",21,0.002800
+"spaghetti, tomatoes, frozen vegetables",50,0.006666
+"spaghetti, tomatoes, green tea",27,0.003600
+"spaghetti, tomatoes, ground beef",42,0.005599
+"spaghetti, tomatoes, milk",44,0.005866
+"spaghetti, tomatoes, mineral water",70,0.009332
+"spaghetti, tomatoes, olive oil",33,0.004399
+"spaghetti, tomatoes, pancakes",25,0.003333
+"spaghetti, tomatoes, shrimp",30,0.003999
+"spaghetti, turkey, burgers",24,0.003200
+"spaghetti, turkey, chocolate",26,0.003466
+"spaghetti, turkey, eggs",39,0.005199
+"spaghetti, turkey, french fries",22,0.002933
+"spaghetti, turkey, frozen vegetables",22,0.002933
+"spaghetti, turkey, green tea",23,0.003066
+"spaghetti, turkey, ground beef",22,0.002933
+"spaghetti, turkey, milk",36,0.004799
+"spaghetti, turkey, mineral water",48,0.006399
+"spaghetti, turkey, olive oil",20,0.002666
+"spaghetti, turkey, pancakes",28,0.003733
+"spaghetti, whole wheat pasta, milk",30,0.003999
+"spaghetti, whole wheat pasta, mineral water",27,0.003600
+"spaghetti, whole wheat rice, burgers",23,0.003066
+"spaghetti, whole wheat rice, chocolate",31,0.004133
+"spaghetti, whole wheat rice, eggs",21,0.002800
+"spaghetti, whole wheat rice, french fries",24,0.003200
+"spaghetti, whole wheat rice, frozen vegetables",24,0.003200
+"spaghetti, whole wheat rice, ground beef",22,0.002933
+"spaghetti, whole wheat rice, milk",28,0.003733
+"spaghetti, whole wheat rice, mineral water",47,0.006266
+"spaghetti, brownies, mineral water",20,0.002666
+"spaghetti, burgers, cake",20,0.002666
+"spaghetti, burgers, chocolate",48,0.006399
+"spaghetti, burgers, eggs",54,0.007199
+"spaghetti, burgers, french fries",42,0.005599
+"spaghetti, burgers, frozen vegetables",27,0.003600
+"spaghetti, burgers, green tea",36,0.004799
+"spaghetti, burgers, ground beef",41,0.005466
+"spaghetti, burgers, low fat yogurt",20,0.002666
+"spaghetti, burgers, milk",48,0.006399
+"spaghetti, burgers, mineral water",49,0.006532
+"spaghetti, burgers, olive oil",21,0.002800
+"spaghetti, burgers, pancakes",33,0.004399
+"spaghetti, burgers, shrimp",21,0.002800
+"spaghetti, cake, chocolate",39,0.005199
+"spaghetti, cake, eggs",36,0.004799
+"spaghetti, cake, french fries",27,0.003600
+"spaghetti, cake, frozen vegetables",25,0.003333
+"spaghetti, cake, green tea",22,0.002933
+"spaghetti, cake, ground beef",28,0.003733
+"spaghetti, cake, milk",31,0.004133
+"spaghetti, cake, mineral water",53,0.007066
+"spaghetti, cake, olive oil",23,0.003066
+"spaghetti, cake, pancakes",31,0.004133
+"spaghetti, cereals, ground beef",23,0.003066
+"spaghetti, cereals, milk",20,0.002666
+"spaghetti, cereals, mineral water",26,0.003466
+"spaghetti, champagne, mineral water",20,0.002666
+"spaghetti, chicken, chocolate",32,0.004266
+"spaghetti, chicken, eggs",31,0.004133
+"spaghetti, chicken, french fries",29,0.003866
+"spaghetti, chicken, frozen vegetables",23,0.003066
+"spaghetti, chicken, green tea",25,0.003333
+"spaghetti, chicken, ground beef",36,0.004799
+"spaghetti, chicken, milk",41,0.005466
+"spaghetti, chicken, mineral water",52,0.006932
+"spaghetti, chicken, olive oil",26,0.003466
+"spaghetti, chicken, pancakes",24,0.003200
+"spaghetti, chicken, shrimp",21,0.002800
+"spaghetti, chicken, soup",20,0.002666
+"spaghetti, chocolate, cookies",23,0.003066
+"spaghetti, chocolate, cooking oil",33,0.004399
+"spaghetti, chocolate, eggs",79,0.010532
+"spaghetti, chocolate, escalope",33,0.004399
+"spaghetti, chocolate, french fries",60,0.007999
+"spaghetti, chocolate, fresh bread",21,0.002800
+"spaghetti, chocolate, frozen smoothie",35,0.004666
+"spaghetti, chocolate, frozen vegetables",59,0.007866
+"spaghetti, chocolate, grated cheese",23,0.003066
+"spaghetti, chocolate, green tea",53,0.007066
+"spaghetti, chocolate, ground beef",69,0.009199
+"spaghetti, chocolate, ham",21,0.002800
+"spaghetti, chocolate, herb & pepper",20,0.002666
+"spaghetti, chocolate, low fat yogurt",28,0.003733
+"spaghetti, chocolate, milk",82,0.010932
+"spaghetti, chocolate, mineral water",119,0.015865
+"spaghetti, chocolate, olive oil",53,0.007066
+"spaghetti, chocolate, pancakes",51,0.006799
+"spaghetti, chocolate, red wine",21,0.002800
+"spaghetti, chocolate, salmon",30,0.003999
+"spaghetti, chocolate, shrimp",48,0.006399
+"spaghetti, chocolate, soup",23,0.003066
+"spaghetti, cooking oil, eggs",31,0.004133
+"spaghetti, cooking oil, ground beef",36,0.004799
+"spaghetti, cooking oil, milk",26,0.003466
+"spaghetti, cooking oil, mineral water",57,0.007599
+"spaghetti, cooking oil, pancakes",22,0.002933
+"spaghetti, cottage cheese, mineral water",25,0.003333
+"spaghetti, eggs, escalope",20,0.002666
+"spaghetti, eggs, french fries",60,0.007999
+"spaghetti, eggs, french wine",22,0.002933
+"spaghetti, eggs, frozen smoothie",20,0.002666
+"spaghetti, eggs, frozen vegetables",43,0.005733
+"spaghetti, eggs, grated cheese",32,0.004266
+"spaghetti, eggs, green tea",43,0.005733
+"spaghetti, eggs, ground beef",67,0.008932
+"spaghetti, eggs, ham",20,0.002666
+"spaghetti, eggs, herb & pepper",36,0.004799
+"spaghetti, eggs, low fat yogurt",28,0.003733
+"spaghetti, eggs, milk",67,0.008932
+"spaghetti, eggs, mineral water",107,0.014265
+"spaghetti, eggs, olive oil",38,0.005066
+"spaghetti, eggs, pancakes",50,0.006666
+"spaghetti, eggs, red wine",28,0.003733
+"spaghetti, eggs, salmon",24,0.003200
+"spaghetti, eggs, shrimp",30,0.003999
+"spaghetti, eggs, soup",24,0.003200
+"spaghetti, avocado, milk",25,0.003333
+"spaghetti, avocado, mineral water",22,0.002933
+"spaghetti, escalope, french fries",26,0.003466
+"spaghetti, escalope, ground beef",25,0.003333
+"spaghetti, escalope, mineral water",36,0.004799
+"spaghetti, escalope, pancakes",20,0.002666
+"spaghetti, french fries, frozen smoothie",20,0.002666
+"spaghetti, french fries, frozen vegetables",40,0.005333
+"spaghetti, french fries, grated cheese",22,0.002933
+"spaghetti, french fries, green tea",40,0.005333
+"spaghetti, french fries, ground beef",42,0.005599
+"spaghetti, french fries, honey",20,0.002666
+"spaghetti, french fries, low fat yogurt",27,0.003600
+"spaghetti, french fries, milk",48,0.006399
+"spaghetti, french fries, mineral water",76,0.010132
+"spaghetti, french fries, olive oil",26,0.003466
+"spaghetti, french fries, pancakes",43,0.005733
+"spaghetti, french wine, mineral water",25,0.003333
+"spaghetti, fresh bread, mineral water",27,0.003600
+"spaghetti, fresh tuna, mineral water",22,0.002933
+"spaghetti, frozen smoothie, frozen vegetables",31,0.004133
+"spaghetti, frozen smoothie, green tea",22,0.002933
+"spaghetti, frozen smoothie, ground beef",23,0.003066
+"spaghetti, frozen smoothie, milk",42,0.005599
+"spaghetti, frozen smoothie, mineral water",51,0.006799
+"spaghetti, frozen smoothie, pancakes",27,0.003600
+"spaghetti, frozen smoothie, shrimp",21,0.002800
+"spaghetti, frozen vegetables, green tea",32,0.004266
+"spaghetti, frozen vegetables, ground beef",65,0.008666
+"spaghetti, frozen vegetables, low fat yogurt",20,0.002666
+"spaghetti, frozen vegetables, milk",62,0.008266
+"spaghetti, frozen vegetables, mineral water",90,0.011998
+"spaghetti, frozen vegetables, olive oil",43,0.005733
+"spaghetti, frozen vegetables, pancakes",33,0.004399
+"spaghetti, frozen vegetables, shrimp",45,0.005999
+"spaghetti, frozen vegetables, soup",27,0.003600
+"spaghetti, grated cheese, green tea",24,0.003200
+"spaghetti, grated cheese, ground beef",40,0.005333
+"spaghetti, grated cheese, herb & pepper",23,0.003066
+"spaghetti, grated cheese, milk",27,0.003600
+"spaghetti, grated cheese, mineral water",47,0.006266
+"spaghetti, grated cheese, pancakes",23,0.003066
+"spaghetti, green tea, ground beef",48,0.006399
+"spaghetti, green tea, milk",39,0.005199
+"spaghetti, green tea, mineral water",62,0.008266
+"spaghetti, green tea, olive oil",34,0.004533
+"spaghetti, green tea, pancakes",37,0.004933
+"spaghetti, ground beef, herb & pepper",48,0.006399
+"spaghetti, ground beef, honey",20,0.002666
+"spaghetti, ground beef, low fat yogurt",30,0.003999
+"spaghetti, ground beef, milk",73,0.009732
+"spaghetti, ground beef, mineral water",128,0.017064
+"spaghetti, ground beef, olive oil",46,0.006133
+"spaghetti, ground beef, pancakes",48,0.006399
+"spaghetti, ground beef, pepper",25,0.003333
+"spaghetti, ground beef, salmon",29,0.003866
+"spaghetti, ground beef, shrimp",45,0.005999
+"spaghetti, ground beef, soup",29,0.003866
+"spaghetti, ham, mineral water",28,0.003733
+"spaghetti, herb & pepper, low fat yogurt",20,0.002666
+"spaghetti, herb & pepper, milk",24,0.003200
+"spaghetti, herb & pepper, mineral water",45,0.005999
+"spaghetti, herb & pepper, olive oil",20,0.002666
+"spaghetti, herb & pepper, pancakes",27,0.003600
+"spaghetti, honey, mineral water",25,0.003333
+"spaghetti, hot dogs, mineral water",28,0.003733
+"spaghetti, light cream, mineral water",24,0.003200
+"spaghetti, low fat yogurt, milk",33,0.004399
+"spaghetti, low fat yogurt, mineral water",42,0.005599
+"spaghetti, low fat yogurt, pancakes",25,0.003333
+"spaghetti, milk, mineral water",118,0.015731
+"spaghetti, milk, olive oil",54,0.007199
+"spaghetti, milk, pancakes",37,0.004933
+"spaghetti, milk, salmon",26,0.003466
+"spaghetti, milk, shrimp",37,0.004933
+"spaghetti, milk, soup",34,0.004533
+"spaghetti, mineral water, olive oil",77,0.010265
+"spaghetti, mineral water, pancakes",86,0.011465
+"spaghetti, mineral water, pepper",22,0.002933
+"spaghetti, mineral water, red wine",30,0.003999
+"spaghetti, mineral water, rice",20,0.002666
+"spaghetti, mineral water, salmon",51,0.006799
+"spaghetti, mineral water, shrimp",64,0.008532
+"spaghetti, mineral water, soup",56,0.007466
+"spaghetti, olive oil, pancakes",38,0.005066
+"spaghetti, olive oil, shrimp",27,0.003600
+"spaghetti, olive oil, soup",22,0.002933
+"spaghetti, pancakes, shrimp",28,0.003733
+"spaghetti, pancakes, soup",22,0.002933
+"tomato juice, green tea, mineral water",20,0.002666
+"tomato sauce, ground beef, mineral water",20,0.002666
+"tomatoes, burgers, mineral water",25,0.003333
+"tomatoes, cake, frozen vegetables",23,0.003066
+"tomatoes, cake, mineral water",25,0.003333
+"tomatoes, chicken, mineral water",24,0.003200
+"tomatoes, chocolate, french fries",26,0.003466
+"tomatoes, chocolate, frozen vegetables",26,0.003466
+"tomatoes, chocolate, green tea",22,0.002933
+"tomatoes, chocolate, milk",27,0.003600
+"tomatoes, chocolate, mineral water",43,0.005733
+"tomatoes, chocolate, shrimp",20,0.002666
+"tomatoes, cooking oil, mineral water",20,0.002666
+"tomatoes, eggs, french fries",25,0.003333
+"tomatoes, eggs, frozen vegetables",23,0.003066
+"tomatoes, eggs, milk",21,0.002800
+"tomatoes, eggs, mineral water",38,0.005066
+"tomatoes, french fries, frozen vegetables",24,0.003200
+"tomatoes, french fries, milk",21,0.002800
+"tomatoes, french fries, mineral water",27,0.003600
+"tomatoes, frozen vegetables, green tea",25,0.003333
+"tomatoes, frozen vegetables, ground beef",24,0.003200
+"tomatoes, frozen vegetables, milk",31,0.004133
+"tomatoes, frozen vegetables, mineral water",44,0.005866
+"tomatoes, frozen vegetables, shrimp",30,0.003999
+"tomatoes, green tea, ground beef",23,0.003066
+"tomatoes, green tea, mineral water",24,0.003200
+"tomatoes, ground beef, milk",22,0.002933
+"tomatoes, ground beef, mineral water",41,0.005466
+"tomatoes, milk, mineral water",49,0.006532
+"tomatoes, milk, soup",23,0.003066
+"tomatoes, mineral water, olive oil",31,0.004133
+"tomatoes, mineral water, pancakes",35,0.004666
+"tomatoes, mineral water, shrimp",22,0.002933
+"tomatoes, mineral water, soup",28,0.003733
+"turkey, burgers, chocolate",23,0.003066
+"turkey, burgers, eggs",29,0.003866
+"turkey, burgers, french fries",20,0.002666
+"turkey, burgers, milk",24,0.003200
+"turkey, burgers, mineral water",26,0.003466
+"turkey, cake, eggs",24,0.003200
+"turkey, cake, mineral water",22,0.002933
+"turkey, chocolate, eggs",27,0.003600
+"turkey, chocolate, milk",26,0.003466
+"turkey, chocolate, mineral water",31,0.004133
+"turkey, eggs, french fries",29,0.003866
+"turkey, eggs, green tea",29,0.003866
+"turkey, eggs, milk",29,0.003866
+"turkey, eggs, mineral water",42,0.005599
+"turkey, eggs, pancakes",22,0.002933
+"turkey, french fries, mineral water",22,0.002933
+"turkey, frozen vegetables, milk",20,0.002666
+"turkey, frozen vegetables, mineral water",33,0.004399
+"turkey, green tea, mineral water",25,0.003333
+"turkey, ground beef, milk",25,0.003333
+"turkey, ground beef, mineral water",29,0.003866
+"turkey, milk, mineral water",46,0.006133
+"turkey, mineral water, pancakes",25,0.003333
+"whole wheat pasta, milk, mineral water",22,0.002933
+"whole wheat pasta, mineral water, olive oil",29,0.003866
+"whole wheat rice, burgers, chocolate",22,0.002933
+"whole wheat rice, burgers, milk",23,0.003066
+"whole wheat rice, burgers, mineral water",27,0.003600
+"whole wheat rice, cake, mineral water",27,0.003600
+"whole wheat rice, chocolate, eggs",20,0.002666
+"whole wheat rice, chocolate, milk",22,0.002933
+"whole wheat rice, chocolate, mineral water",29,0.003866
+"whole wheat rice, eggs, mineral water",29,0.003866
+"whole wheat rice, french fries, green tea",20,0.002666
+"whole wheat rice, french fries, mineral water",23,0.003066
+"whole wheat rice, frozen vegetables, milk",23,0.003066
+"whole wheat rice, frozen vegetables, mineral water",33,0.004399
+"whole wheat rice, green tea, mineral water",20,0.002666
+"whole wheat rice, ground beef, milk",21,0.002800
+"whole wheat rice, ground beef, mineral water",29,0.003866
+"whole wheat rice, low fat yogurt, mineral water",22,0.002933
+"whole wheat rice, milk, mineral water",38,0.005066
+"whole wheat rice, mineral water, pancakes",31,0.004133
+"brownies, eggs, mineral water",27,0.003600
+"burgers, cake, chocolate",23,0.003066
+"burgers, cake, eggs",26,0.003466
+"burgers, cake, french fries",21,0.002800
+"burgers, cake, milk",28,0.003733
+"burgers, cake, mineral water",36,0.004799
+"burgers, chocolate, eggs",41,0.005466
+"burgers, chocolate, french fries",36,0.004799
+"burgers, chocolate, frozen vegetables",25,0.003333
+"burgers, chocolate, green tea",26,0.003466
+"burgers, chocolate, ground beef",23,0.003066
+"burgers, chocolate, milk",41,0.005466
+"burgers, chocolate, mineral water",43,0.005733
+"burgers, chocolate, pancakes",23,0.003066
+"burgers, chocolate, shrimp",23,0.003066
+"burgers, cookies, eggs",20,0.002666
+"burgers, cookies, green tea",20,0.002666
+"burgers, eggs, french fries",68,0.009065
+"burgers, eggs, frozen vegetables",21,0.002800
+"burgers, eggs, green tea",45,0.005999
+"burgers, eggs, ground beef",30,0.003999
+"burgers, eggs, milk",40,0.005333
+"burgers, eggs, mineral water",59,0.007866
+"burgers, eggs, pancakes",31,0.004133
+"burgers, french fries, frozen vegetables",20,0.002666
+"burgers, french fries, green tea",41,0.005466
+"burgers, french fries, milk",42,0.005599
+"burgers, french fries, mineral water",39,0.005199
+"burgers, french fries, pancakes",24,0.003200
+"burgers, frozen smoothie, mineral water",24,0.003200
+"burgers, frozen vegetables, milk",22,0.002933
+"burgers, frozen vegetables, mineral water",37,0.004933
+"burgers, green tea, milk",28,0.003733
+"burgers, green tea, mineral water",26,0.003466
+"burgers, ground beef, milk",31,0.004133
+"burgers, ground beef, mineral water",40,0.005333
+"burgers, milk, mineral water",52,0.006932
+"burgers, milk, shrimp",22,0.002933
+"burgers, mineral water, olive oil",25,0.003333
+"burgers, mineral water, pancakes",28,0.003733
+"burgers, mineral water, shrimp",25,0.003333
+"butter, chocolate, french fries",20,0.002666
+"cake, chicken, mineral water",23,0.003066
+"cake, chocolate, eggs",32,0.004266
+"cake, chocolate, french fries",26,0.003466
+"cake, chocolate, milk",23,0.003066
+"cake, chocolate, mineral water",42,0.005599
+"cake, chocolate, olive oil",21,0.002800
+"cake, chocolate, pancakes",21,0.002800
+"cake, eggs, french fries",34,0.004533
+"cake, eggs, green tea",25,0.003333
+"cake, eggs, milk",31,0.004133
+"cake, eggs, mineral water",54,0.007199
+"cake, eggs, pancakes",24,0.003200
+"cake, eggs, shrimp",20,0.002666
+"cake, french fries, green tea",33,0.004399
+"cake, french fries, milk",26,0.003466
+"cake, french fries, mineral water",48,0.006399
+"cake, french fries, pancakes",20,0.002666
+"cake, frozen smoothie, mineral water",24,0.003200
+"cake, frozen vegetables, milk",21,0.002800
+"cake, frozen vegetables, mineral water",36,0.004799
+"cake, green tea, mineral water",31,0.004133
+"cake, green tea, pancakes",23,0.003066
+"cake, ground beef, mineral water",26,0.003466
+"cake, low fat yogurt, mineral water",22,0.002933
+"cake, milk, mineral water",48,0.006399
+"cake, mineral water, olive oil",24,0.003200
+"cake, mineral water, pancakes",31,0.004133
+"cake, mineral water, shrimp",22,0.002933
+"cake, mineral water, soup",24,0.003200
+"cereals, chocolate, mineral water",20,0.002666
+"cereals, milk, mineral water",27,0.003600
+"chicken, chocolate, eggs",23,0.003066
+"chicken, chocolate, french fries",28,0.003733
+"chicken, chocolate, frozen vegetables",20,0.002666
+"chicken, chocolate, green tea",30,0.003999
+"chicken, chocolate, ground beef",21,0.002800
+"chicken, chocolate, milk",34,0.004533
+"chicken, chocolate, mineral water",57,0.007599
+"chicken, eggs, french fries",24,0.003200
+"chicken, eggs, frozen vegetables",20,0.002666
+"chicken, eggs, milk",31,0.004133
+"chicken, eggs, mineral water",39,0.005199
+"chicken, french fries, milk",25,0.003333
+"chicken, french fries, mineral water",32,0.004266
+"chicken, fresh bread, mineral water",20,0.002666
+"chicken, frozen smoothie, milk",20,0.002666
+"chicken, frozen smoothie, mineral water",20,0.002666
+"chicken, frozen vegetables, milk",22,0.002933
+"chicken, frozen vegetables, mineral water",28,0.003733
+"chicken, green tea, mineral water",29,0.003866
+"chicken, ground beef, milk",29,0.003866
+"chicken, ground beef, mineral water",29,0.003866
+"chicken, milk, mineral water",50,0.006666
+"chicken, milk, olive oil",27,0.003600
+"chicken, milk, pancakes",23,0.003066
+"chicken, milk, soup",20,0.002666
+"chicken, mineral water, olive oil",27,0.003600
+"chicken, mineral water, pancakes",36,0.004799
+"chicken, mineral water, shrimp",22,0.002933
+"chicken, mineral water, soup",24,0.003200
+"chocolate, cookies, french fries",30,0.003999
+"chocolate, cookies, green tea",20,0.002666
+"chocolate, cooking oil, eggs",34,0.004533
+"chocolate, cooking oil, french fries",21,0.002800
+"chocolate, cooking oil, milk",33,0.004399
+"chocolate, cooking oil, mineral water",43,0.005733
+"chocolate, eggs, escalope",25,0.003333
+"chocolate, eggs, french fries",63,0.008399
+"chocolate, eggs, frozen smoothie",21,0.002800
+"chocolate, eggs, frozen vegetables",43,0.005733
+"chocolate, eggs, green tea",41,0.005466
+"chocolate, eggs, ground beef",49,0.006532
+"chocolate, eggs, herb & pepper",22,0.002933
+"chocolate, eggs, low fat yogurt",25,0.003333
+"chocolate, eggs, milk",69,0.009199
+"chocolate, eggs, mineral water",101,0.013465
+"chocolate, eggs, olive oil",30,0.003999
+"chocolate, eggs, pancakes",42,0.005599
+"chocolate, eggs, shrimp",29,0.003866
+"chocolate, eggs, soup",20,0.002666
+"chocolate, avocado, mineral water",23,0.003066
+"chocolate, escalope, french fries",39,0.005199
+"chocolate, escalope, green tea",21,0.002800
+"chocolate, escalope, ground beef",21,0.002800
+"chocolate, escalope, milk",23,0.003066
+"chocolate, escalope, mineral water",42,0.005599
+"chocolate, french fries, frozen smoothie",27,0.003600
+"chocolate, french fries, frozen vegetables",42,0.005599
+"chocolate, french fries, grated cheese",24,0.003200
+"chocolate, french fries, green tea",39,0.005199
+"chocolate, french fries, ground beef",25,0.003333
+"chocolate, french fries, low fat yogurt",30,0.003999
+"chocolate, french fries, milk",55,0.007332
+"chocolate, french fries, mineral water",64,0.008532
+"chocolate, french fries, olive oil",23,0.003066
+"chocolate, french fries, pancakes",41,0.005466
+"chocolate, french fries, shrimp",25,0.003333
+"chocolate, fresh bread, mineral water",30,0.003999
+"chocolate, frozen smoothie, milk",31,0.004133
+"chocolate, frozen smoothie, mineral water",38,0.005066
+"chocolate, frozen vegetables, green tea",23,0.003066
+"chocolate, frozen vegetables, ground beef",43,0.005733
+"chocolate, frozen vegetables, milk",60,0.007999
+"chocolate, frozen vegetables, mineral water",73,0.009732
+"chocolate, frozen vegetables, olive oil",30,0.003999
+"chocolate, frozen vegetables, pancakes",24,0.003200
+"chocolate, frozen vegetables, shrimp",40,0.005333
+"chocolate, grated cheese, mineral water",30,0.003999
+"chocolate, green tea, ground beef",25,0.003333
+"chocolate, green tea, milk",35,0.004666
+"chocolate, green tea, mineral water",52,0.006932
+"chocolate, green tea, olive oil",21,0.002800
+"chocolate, green tea, pancakes",32,0.004266
+"chocolate, ground beef, herb & pepper",30,0.003999
+"chocolate, ground beef, milk",46,0.006133
+"chocolate, ground beef, mineral water",82,0.010932
+"chocolate, ground beef, olive oil",25,0.003333
+"chocolate, ground beef, pancakes",28,0.003733
+"chocolate, ground beef, shrimp",26,0.003466
+"chocolate, ground beef, soup",21,0.002800
+"chocolate, ham, mineral water",20,0.002666
+"chocolate, herb & pepper, milk",20,0.002666
+"chocolate, herb & pepper, mineral water",30,0.003999
+"chocolate, honey, mineral water",23,0.003066
+"chocolate, hot dogs, mineral water",21,0.002800
+"chocolate, low fat yogurt, milk",28,0.003733
+"chocolate, low fat yogurt, mineral water",43,0.005733
+"chocolate, milk, mineral water",105,0.013998
+"chocolate, milk, olive oil",39,0.005199
+"chocolate, milk, pancakes",36,0.004799
+"chocolate, milk, salmon",21,0.002800
+"chocolate, milk, shrimp",41,0.005466
+"chocolate, milk, soup",30,0.003999
+"chocolate, mineral water, olive oil",62,0.008266
+"chocolate, mineral water, pancakes",70,0.009332
+"chocolate, mineral water, pepper",20,0.002666
+"chocolate, mineral water, salmon",34,0.004533
+"chocolate, mineral water, shrimp",57,0.007599
+"chocolate, mineral water, soup",42,0.005599
+"chocolate, olive oil, pancakes",25,0.003333
+"chocolate, olive oil, shrimp",22,0.002933
+"chocolate, pancakes, shrimp",21,0.002800
+"cookies, eggs, french fries",20,0.002666
+"cookies, eggs, green tea",22,0.002933
+"cookies, french fries, green tea",35,0.004666
+"cooking oil, eggs, milk",30,0.003999
+"cooking oil, eggs, mineral water",48,0.006399
+"cooking oil, french fries, mineral water",22,0.002933
+"cooking oil, frozen vegetables, milk",21,0.002800
+"cooking oil, frozen vegetables, mineral water",21,0.002800
+"cooking oil, green tea, mineral water",24,0.003200
+"cooking oil, ground beef, mineral water",24,0.003200
+"cooking oil, low fat yogurt, mineral water",20,0.002666
+"cooking oil, milk, mineral water",35,0.004666
+"cooking oil, mineral water, pancakes",35,0.004666
+"eggs, escalope, mineral water",24,0.003200
+"eggs, french fries, frozen vegetables",39,0.005199
+"eggs, french fries, green tea",53,0.007066
+"eggs, french fries, ground beef",27,0.003600
+"eggs, french fries, ham",20,0.002666
+"eggs, french fries, low fat yogurt",26,0.003466
+"eggs, french fries, milk",54,0.007199
+"eggs, french fries, mineral water",52,0.006932
+"eggs, french fries, pancakes",36,0.004799
+"eggs, french fries, shrimp",21,0.002800
+"eggs, fresh bread, milk",20,0.002666
+"eggs, fresh bread, mineral water",27,0.003600
+"eggs, fresh tuna, mineral water",21,0.002800
+"eggs, frozen smoothie, mineral water",31,0.004133
+"eggs, frozen vegetables, green tea",25,0.003333
+"eggs, frozen vegetables, ground beef",33,0.004399
+"eggs, frozen vegetables, low fat yogurt",24,0.003200
+"eggs, frozen vegetables, milk",55,0.007332
+"eggs, frozen vegetables, mineral water",68,0.009065
+"eggs, frozen vegetables, olive oil",21,0.002800
+"eggs, frozen vegetables, pancakes",23,0.003066
+"eggs, frozen vegetables, shrimp",28,0.003733
+"eggs, grated cheese, mineral water",33,0.004399
+"eggs, green tea, milk",29,0.003866
+"eggs, green tea, mineral water",52,0.006932
+"eggs, green tea, pancakes",27,0.003600
+"eggs, ground beef, herb & pepper",31,0.004133
+"eggs, ground beef, milk",44,0.005866
+"eggs, ground beef, mineral water",76,0.010132
+"eggs, ground beef, olive oil",22,0.002933
+"eggs, herb & pepper, milk",25,0.003333
+"eggs, herb & pepper, mineral water",40,0.005333
+"eggs, low fat yogurt, milk",28,0.003733
+"eggs, low fat yogurt, mineral water",46,0.006133
+"eggs, milk, mineral water",98,0.013065
+"eggs, milk, olive oil",28,0.003733
+"eggs, milk, pancakes",35,0.004666
+"eggs, milk, shrimp",32,0.004266
+"eggs, mineral water, olive oil",44,0.005866
+"eggs, mineral water, pancakes",59,0.007866
+"eggs, mineral water, red wine",25,0.003333
+"eggs, mineral water, salmon",27,0.003600
+"eggs, mineral water, shrimp",39,0.005199
+"eggs, mineral water, soup",37,0.004933
+"eggs, olive oil, pancakes",20,0.002666
+"avocado, french fries, mineral water",22,0.002933
+"avocado, milk, mineral water",25,0.003333
+"escalope, french fries, frozen vegetables",20,0.002666
+"escalope, french fries, mineral water",22,0.002933
+"escalope, ground beef, mineral water",21,0.002800
+"escalope, milk, mineral water",30,0.003999
+"escalope, mineral water, pancakes",21,0.002800
+"french fries, frozen smoothie, frozen vegetables",21,0.002800
+"french fries, frozen smoothie, green tea",29,0.003866
+"french fries, frozen smoothie, milk",23,0.003066
+"french fries, frozen smoothie, mineral water",27,0.003600
+"french fries, frozen vegetables, green tea",29,0.003866
+"french fries, frozen vegetables, milk",43,0.005733
+"french fries, frozen vegetables, mineral water",46,0.006133
+"french fries, frozen vegetables, pancakes",24,0.003200
+"french fries, frozen vegetables, shrimp",21,0.002800
+"french fries, green tea, milk",30,0.003999
+"french fries, green tea, mineral water",46,0.006133
+"french fries, green tea, pancakes",34,0.004533
+"french fries, ground beef, herb & pepper",24,0.003200
+"french fries, ground beef, milk",27,0.003600
+"french fries, ground beef, mineral water",40,0.005333
+"french fries, low fat yogurt, milk",25,0.003333
+"french fries, low fat yogurt, mineral water",28,0.003733
+"french fries, milk, mineral water",62,0.008266
+"french fries, milk, olive oil",24,0.003200
+"french fries, milk, pancakes",26,0.003466
+"french fries, milk, shrimp",29,0.003866
+"french fries, mineral water, olive oil",30,0.003999
+"french fries, mineral water, pancakes",49,0.006532
+"french fries, mineral water, shrimp",20,0.002666
+"french fries, mineral water, soup",24,0.003200
+"french wine, milk, mineral water",21,0.002800
+"fresh bread, frozen vegetables, mineral water",23,0.003066
+"fresh bread, milk, mineral water",30,0.003999
+"frozen smoothie, frozen vegetables, milk",20,0.002666
+"frozen smoothie, frozen vegetables, mineral water",25,0.003333
+"frozen smoothie, frozen vegetables, shrimp",21,0.002800
+"frozen smoothie, green tea, milk",21,0.002800
+"frozen smoothie, green tea, mineral water",28,0.003733
+"frozen smoothie, ground beef, mineral water",26,0.003466
+"frozen smoothie, milk, mineral water",46,0.006133
+"frozen smoothie, mineral water, olive oil",20,0.002666
+"frozen smoothie, mineral water, pancakes",29,0.003866
+"frozen vegetables, green tea, ground beef",20,0.002666
+"frozen vegetables, green tea, milk",24,0.003200
+"frozen vegetables, green tea, mineral water",34,0.004533
+"frozen vegetables, ground beef, herb & pepper",21,0.002800
+"frozen vegetables, ground beef, low fat yogurt",20,0.002666
+"frozen vegetables, ground beef, milk",43,0.005733
+"frozen vegetables, ground beef, mineral water",69,0.009199
+"frozen vegetables, ground beef, olive oil",25,0.003333
+"frozen vegetables, ground beef, shrimp",24,0.003200
+"frozen vegetables, herb & pepper, mineral water",24,0.003200
+"frozen vegetables, honey, mineral water",26,0.003466
+"frozen vegetables, low fat yogurt, milk",28,0.003733
+"frozen vegetables, low fat yogurt, mineral water",34,0.004533
+"frozen vegetables, milk, mineral water",83,0.011065
+"frozen vegetables, milk, olive oil",36,0.004799
+"frozen vegetables, milk, pancakes",22,0.002933
+"frozen vegetables, milk, shrimp",35,0.004666
+"frozen vegetables, milk, soup",30,0.003999
+"frozen vegetables, mineral water, olive oil",49,0.006532
+"frozen vegetables, mineral water, pancakes",46,0.006133
+"frozen vegetables, mineral water, salmon",23,0.003066
+"frozen vegetables, mineral water, shrimp",54,0.007199
+"frozen vegetables, mineral water, soup",38,0.005066
+"grated cheese, ground beef, mineral water",38,0.005066
+"grated cheese, herb & pepper, mineral water",21,0.002800
+"grated cheese, milk, mineral water",27,0.003600
+"grated cheese, mineral water, olive oil",22,0.002933
+"grated cheese, mineral water, pancakes",26,0.003466
+"green tea, ground beef, milk",25,0.003333
+"green tea, ground beef, mineral water",39,0.005199
+"green tea, honey, mineral water",21,0.002800
+"green tea, milk, mineral water",43,0.005733
+"green tea, mineral water, olive oil",32,0.004266
+"green tea, mineral water, pancakes",43,0.005733
+"green tea, mineral water, salmon",20,0.002666
+"green tea, mineral water, shrimp",21,0.002800
+"green tea, mineral water, soup",20,0.002666
+"ground beef, ham, mineral water",20,0.002666
+"ground beef, herb & pepper, milk",27,0.003600
+"ground beef, herb & pepper, mineral water",50,0.006666
+"ground beef, herb & pepper, pancakes",20,0.002666
+"ground beef, herb & pepper, shrimp",22,0.002933
+"ground beef, honey, mineral water",21,0.002800
+"ground beef, low fat yogurt, milk",23,0.003066
+"ground beef, low fat yogurt, mineral water",36,0.004799
+"ground beef, milk, mineral water",83,0.011065
+"ground beef, milk, olive oil",37,0.004933
+"ground beef, milk, pancakes",26,0.003466
+"ground beef, milk, shrimp",21,0.002800
+"ground beef, milk, soup",30,0.003999
+"ground beef, mineral water, olive oil",50,0.006666
+"ground beef, mineral water, pancakes",56,0.007466
+"ground beef, mineral water, red wine",21,0.002800
+"ground beef, mineral water, salmon",29,0.003866
+"ground beef, mineral water, shrimp",38,0.005066
+"ground beef, mineral water, soup",38,0.005066
+"herb & pepper, milk, mineral water",31,0.004133
+"herb & pepper, mineral water, pancakes",27,0.003600
+"honey, milk, mineral water",25,0.003333
+"low fat yogurt, milk, mineral water",36,0.004799
+"low fat yogurt, mineral water, pancakes",32,0.004266
+"low fat yogurt, mineral water, soup",20,0.002666
+"milk, mineral water, olive oil",64,0.008532
+"milk, mineral water, pancakes",59,0.007866
+"milk, mineral water, salmon",33,0.004399
+"milk, mineral water, shrimp",59,0.007866
+"milk, mineral water, soup",64,0.008532
+"milk, olive oil, pancakes",23,0.003066
+"milk, olive oil, shrimp",24,0.003200
+"milk, olive oil, soup",27,0.003600
+"milk, pancakes, shrimp",25,0.003333
+"mineral water, olive oil, pancakes",35,0.004666
+"mineral water, olive oil, salmon",20,0.002666
+"mineral water, olive oil, shrimp",34,0.004533
+"mineral water, olive oil, soup",39,0.005199
+"mineral water, pancakes, shrimp",34,0.004533
+"mineral water, pancakes, soup",32,0.004266
+"mineral water, shrimp, soup",20,0.002666
+"spaghetti, tomatoes, frozen vegetables, mineral water",23,0.003066
+"spaghetti, tomatoes, ground beef, mineral water",23,0.003066
+"spaghetti, tomatoes, milk, mineral water",25,0.003333
+"spaghetti, turkey, milk, mineral water",20,0.002666
+"spaghetti, burgers, chocolate, eggs",20,0.002666
+"spaghetti, burgers, chocolate, milk",22,0.002933
+"spaghetti, chicken, milk, mineral water",20,0.002666
+"spaghetti, chocolate, eggs, french fries",22,0.002933
+"spaghetti, chocolate, eggs, ground beef",23,0.003066
+"spaghetti, chocolate, eggs, milk",22,0.002933
+"spaghetti, chocolate, eggs, mineral water",34,0.004533
+"spaghetti, chocolate, french fries, mineral water",21,0.002800
+"spaghetti, chocolate, frozen vegetables, ground beef",23,0.003066
+"spaghetti, chocolate, frozen vegetables, milk",26,0.003466
+"spaghetti, chocolate, frozen vegetables, mineral water",31,0.004133
+"spaghetti, chocolate, ground beef, milk",22,0.002933
+"spaghetti, chocolate, ground beef, mineral water",30,0.003999
+"spaghetti, chocolate, milk, mineral water",37,0.004933
+"spaghetti, chocolate, mineral water, olive oil",29,0.003866
+"spaghetti, chocolate, mineral water, pancakes",28,0.003733
+"spaghetti, chocolate, mineral water, shrimp",26,0.003466
+"spaghetti, cooking oil, eggs, mineral water",22,0.002933
+"spaghetti, eggs, french fries, milk",20,0.002666
+"spaghetti, eggs, french fries, mineral water",23,0.003066
+"spaghetti, eggs, frozen vegetables, milk",20,0.002666
+"spaghetti, eggs, frozen vegetables, mineral water",22,0.002933
+"spaghetti, eggs, ground beef, milk",22,0.002933
+"spaghetti, eggs, ground beef, mineral water",29,0.003866
+"spaghetti, eggs, milk, mineral water",33,0.004399
+"spaghetti, french fries, ground beef, mineral water",21,0.002800
+"spaghetti, french fries, milk, mineral water",21,0.002800
+"spaghetti, frozen smoothie, milk, mineral water",24,0.003200
+"spaghetti, frozen vegetables, ground beef, milk",23,0.003066
+"spaghetti, frozen vegetables, ground beef, mineral water",33,0.004399
+"spaghetti, frozen vegetables, milk, mineral water",34,0.004533
+"spaghetti, frozen vegetables, mineral water, olive oil",21,0.002800
+"spaghetti, frozen vegetables, mineral water, shrimp",25,0.003333
+"spaghetti, ground beef, herb & pepper, mineral water",21,0.002800
+"spaghetti, ground beef, milk, mineral water",33,0.004399
+"spaghetti, ground beef, mineral water, olive oil",23,0.003066
+"spaghetti, ground beef, mineral water, pancakes",23,0.003066
+"spaghetti, ground beef, mineral water, shrimp",22,0.002933
+"spaghetti, milk, mineral water, olive oil",25,0.003333
+"spaghetti, milk, mineral water, shrimp",23,0.003066
+"spaghetti, mineral water, olive oil, pancakes",21,0.002800
+"chocolate, eggs, french fries, milk",20,0.002666
+"chocolate, eggs, frozen vegetables, mineral water",23,0.003066
+"chocolate, eggs, ground beef, mineral water",30,0.003999
+"chocolate, eggs, milk, mineral water",31,0.004133
+"chocolate, french fries, milk, mineral water",20,0.002666
+"chocolate, frozen vegetables, ground beef, milk",20,0.002666
+"chocolate, frozen vegetables, ground beef, mineral water",25,0.003333
+"chocolate, frozen vegetables, milk, mineral water",30,0.003999
+"chocolate, frozen vegetables, mineral water, olive oil",21,0.002800
+"chocolate, frozen vegetables, mineral water, shrimp",24,0.003200
+"chocolate, ground beef, milk, mineral water",25,0.003333
+"chocolate, milk, mineral water, shrimp",22,0.002933
+"eggs, frozen vegetables, ground beef, mineral water",20,0.002666
+"eggs, frozen vegetables, milk, mineral water",28,0.003733
+"eggs, ground beef, milk, mineral water",25,0.003333
+"eggs, milk, mineral water, olive oil",20,0.002666
+"frozen vegetables, ground beef, milk, mineral water",28,0.003733
+"frozen vegetables, milk, mineral water, olive oil",25,0.003333
+"frozen vegetables, milk, mineral water, shrimp",21,0.002800
+"frozen vegetables, milk, mineral water, soup",23,0.003066

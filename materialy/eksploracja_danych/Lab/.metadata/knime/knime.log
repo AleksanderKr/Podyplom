@@ -1,0 +1,183 @@
+2022-02-21 15:27:14,342 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : I/O error occured while executing PowerShell command powershell -inputformat none -outputformat text -NonInteractive -Command Get-MpComputerStatus -ErrorAction Stop | Select-Object -ExpandProperty AMServiceEnabled.
+java.io.IOException: Cannot run program "powershell": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(Unknown Source)
+	at java.base/java.lang.ProcessBuilder.start(Unknown Source)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.executePowerShellCommand(WindowsDefenderExceptionHandler.java:293)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.executePowerShellCommand(WindowsDefenderExceptionHandler.java:284)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.isDefenderEnabled(WindowsDefenderExceptionHandler.java:175)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.checkForAndAddExceptionToWindowsDefender(WindowsDefenderExceptionHandler.java:141)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:133)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.base/java.lang.ProcessImpl.start(Unknown Source)
+	... 19 more
+2022-02-21 15:29:19,120 : WARN  : main :  : Node : CSV Reader : 3:1 : Please specify a file
+2022-02-22 15:33:18,534 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : I/O error occured while executing PowerShell command powershell -inputformat none -outputformat text -NonInteractive -Command Get-MpComputerStatus -ErrorAction Stop | Select-Object -ExpandProperty AMServiceEnabled.
+java.io.IOException: Cannot run program "powershell": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(Unknown Source)
+	at java.base/java.lang.ProcessBuilder.start(Unknown Source)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.executePowerShellCommand(WindowsDefenderExceptionHandler.java:293)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.executePowerShellCommand(WindowsDefenderExceptionHandler.java:284)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.isDefenderEnabled(WindowsDefenderExceptionHandler.java:175)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.checkForAndAddExceptionToWindowsDefender(WindowsDefenderExceptionHandler.java:141)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:133)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.base/java.lang.ProcessImpl.start(Unknown Source)
+	... 19 more
+2022-03-16 08:18:22,282 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : I/O error occured while executing PowerShell command powershell -inputformat none -outputformat text -NonInteractive -Command Get-MpComputerStatus -ErrorAction Stop | Select-Object -ExpandProperty AMServiceEnabled.
+java.io.IOException: Cannot run program "powershell": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(Unknown Source)
+	at java.base/java.lang.ProcessBuilder.start(Unknown Source)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.executePowerShellCommand(WindowsDefenderExceptionHandler.java:293)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.executePowerShellCommand(WindowsDefenderExceptionHandler.java:284)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.isDefenderEnabled(WindowsDefenderExceptionHandler.java:175)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.checkForAndAddExceptionToWindowsDefender(WindowsDefenderExceptionHandler.java:141)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:133)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.base/java.lang.ProcessImpl.start(Unknown Source)
+	... 19 more
+2022-03-16 08:23:24,430 : WARN  : main :  : Node : File Reader : 3:1 : Please specify a file
+2022-03-16 08:26:13,961 : WARN  : main :  : Node : Numeric Binner : 3:3 : No column select for binning.
+2022-03-16 09:37:19,379 : ERROR : Clear OSGi configuration :  : InvokeInstallSiteAction :  :  : Could not clean OSGi configuration area: C:\Program Files\KNIME\configuration\org.eclipse.osgi\124\0\.cp\os\win32\x86_64\localfile_1_0_0.dll
+2022-03-16 09:37:29,013 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : I/O error occured while executing PowerShell command powershell -inputformat none -outputformat text -NonInteractive -Command Get-MpComputerStatus -ErrorAction Stop | Select-Object -ExpandProperty AMServiceEnabled.
+java.io.IOException: Cannot run program "powershell": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(Unknown Source)
+	at java.base/java.lang.ProcessBuilder.start(Unknown Source)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.executePowerShellCommand(WindowsDefenderExceptionHandler.java:293)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.executePowerShellCommand(WindowsDefenderExceptionHandler.java:284)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.isDefenderEnabled(WindowsDefenderExceptionHandler.java:175)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.checkForAndAddExceptionToWindowsDefender(WindowsDefenderExceptionHandler.java:141)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:133)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.base/java.lang.ProcessImpl.start(Unknown Source)
+	... 19 more
+2022-03-16 09:40:53,671 : WARN  : main :  : Node : File Reader : 3:2 : Please specify a file
+2022-03-16 09:42:57,122 : WARN  : main :  : Node : ARFF Reader : 3:3 : No source location provided! Please enter a valid location.
+2022-03-16 09:44:16,920 : WARN  : main :  : Node : Decision Tree Learner : 3:1 : Guessing target column: "Class".
+2022-03-30 09:44:58,155 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : I/O error occured while executing PowerShell command powershell -inputformat none -outputformat text -NonInteractive -Command Get-MpComputerStatus -ErrorAction Stop | Select-Object -ExpandProperty AMServiceEnabled.
+java.io.IOException: Cannot run program "powershell": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(Unknown Source)
+	at java.base/java.lang.ProcessBuilder.start(Unknown Source)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.executePowerShellCommand(WindowsDefenderExceptionHandler.java:293)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.executePowerShellCommand(WindowsDefenderExceptionHandler.java:284)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.isDefenderEnabled(WindowsDefenderExceptionHandler.java:175)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.checkForAndAddExceptionToWindowsDefender(WindowsDefenderExceptionHandler.java:141)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:133)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.base/java.lang.ProcessImpl.start(Unknown Source)
+	... 19 more
+2022-03-30 09:47:45,793 : WARN  : main :  : Node : File Reader : 3:1 : Please specify a file
+2022-03-30 09:54:34,998 : WARN  : main :  : Node : String Replace (Dictionary) : 3:3 : No settings available
+2022-03-30 09:56:34,201 : WARN  : main :  : Node : String Replace (Dictionary) : 3:6:3 : No settings available
+2022-03-30 09:57:34,377 : WARN  : main :  : Node : String Replace (Dictionary) : 3:3 : No settings available
+2022-03-30 09:58:47,698 : WARN  : main :  : Node : String Replace (Dictionary) : 3:4 : No settings available
+2022-03-30 09:58:50,286 : WARN  : main :  : Node : String Replace (Dictionary) : 3:4 : No settings available
+2022-03-30 09:59:13,144 : WARN  : main :  : Node : String Replace (Dictionary) : 3:5 : No settings available
+2022-03-30 09:59:13,641 : WARN  : main :  : Node : String Replace (Dictionary) : 3:5 : No settings available
+2022-03-30 10:54:16,514 : ERROR : Clear OSGi configuration :  : InvokeInstallSiteAction :  :  : Could not clean OSGi configuration area: C:\Program Files\KNIME\configuration\org.eclipse.osgi\282\0\.cp\os\win32\x86_64\localfile_1_0_0.dll
+2022-03-30 10:54:28,463 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : I/O error occured while executing PowerShell command powershell -inputformat none -outputformat text -NonInteractive -Command Get-MpComputerStatus -ErrorAction Stop | Select-Object -ExpandProperty AMServiceEnabled.
+java.io.IOException: Cannot run program "powershell": CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessBuilder.start(Unknown Source)
+	at java.base/java.lang.ProcessBuilder.start(Unknown Source)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.executePowerShellCommand(WindowsDefenderExceptionHandler.java:293)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.executePowerShellCommand(WindowsDefenderExceptionHandler.java:284)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.isDefenderEnabled(WindowsDefenderExceptionHandler.java:175)
+	at org.knime.product.rcp.startup.WindowsDefenderExceptionHandler.checkForAndAddExceptionToWindowsDefender(WindowsDefenderExceptionHandler.java:141)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:133)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+Caused by: java.io.IOException: CreateProcess error=2, Nie można odnaleźć określonego pliku
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.base/java.lang.ProcessImpl.start(Unknown Source)
+	... 19 more
+2024-07-07 21:31:50,444 : ERROR : main :  : WindowsDefenderExceptionHandler :  :  : PowerShell command powershell -inputformat none -outputformat text -NonInteractive -Command Get-MpComputerStatus -ErrorAction Stop | Select-Object -ExpandProperty AMServiceEnabled did not terminate successfully.
+2024-07-07 22:27:39,829 : WARN  : main :  : Node : Table Reader : 3:1 : Please specify a file
+2024-07-07 22:28:13,351 : WARN  : main :  : Node : Read Excel Sheet Names : 3:2 : Please specify a file
+2024-07-07 22:29:28,596 : WARN  : main :  : Node : Scatter Plot (local) : 3:4 : No columns to visualize are available! Please refer to the NodeDescription to find out why!
+2024-07-07 22:29:27,554 : WARN  : main :  : Node : Scatter Plot (local) : 3:4 : No columns to visualize are available! Please refer to the NodeDescription to find out why!
+2024-07-07 22:29:28,398 : WARN  : main :  : Node : Scatter Plot (local) : 3:4 : No columns to visualize are available! Please refer to the NodeDescription to find out why!
+2024-07-07 22:29:34,830 : WARN  : KNIME-Worker-6-Read Excel Sheet Names 3:2 :  : Node : Scatter Plot (local) : 3:4 : Some columns are ignored: 
+2024-07-07 22:32:02,937 : WARN  : main :  : Node : CSV Reader : 3:5 : Please specify a file
+2024-07-07 22:33:37,731 : WARN  : main :  : Node : Scatter Plot (local) : 3:4 : No columns to visualize are available! Please refer to the NodeDescription to find out why!
+2024-07-07 22:33:45,681 : WARN  : main :  : Node : Scatter Plot (local) : 3:4 : No columns to visualize are available! Please refer to the NodeDescription to find out why!
+2024-07-07 22:33:46,064 : WARN  : main :  : Node : Scatter Plot (local) : 3:4 : No columns to visualize are available! Please refer to the NodeDescription to find out why!

@@ -1,0 +1,5 @@
+C:\=== MOJE NOWY DYSK ===\NAUKA\- MOJA SCHAB\7 SEM MODEL\problems vs perceived usability\chrome.csv
+C:\=== MOJE NOWY DYSK ===\DYDAKTYKA\EKSPLORACJA DANYCH\Lab\churn.txt
+C:\=== MOJE NOWY DYSK ===\DYDAKTYKA\EKSPLORACJA DANYCH\Lab\hepatitis.arff
+C:\=== MOJE NOWY DYSK ===\DYDAKTYKA\EKSPLORACJA DANYCH\Lab\cadata.csv
+C:\=== MOJE NOWY DYSK ===\DYDAKTYKA\EKSPLORACJA DANYCH\Lab\cars.txt
