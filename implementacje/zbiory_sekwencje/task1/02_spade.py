@@ -2,184 +2,110 @@ import csv
 import os
 import argparse
 from collections import defaultdict
-
-DATA_DIR = "data"
-OUT_DIR = "out"
-
-POS_KEYS = ("pos", "position", "event_idx", "idx", "order", "time", "t")
+from itertools import combinations
 
 
-def item_key(x: str):
-    if x.startswith("i") and x[1:].isdigit():
-        return int(x[1:])
-    return x
+class SpadeMiner:
+    def __init__(self, min_sup_count):
+        self.min_sup_count = min_sup_count
+        self.frequent_sequences = {}  # (itemset_tuple, ...) -> count
+        self.id_lists = {}  # item -> {sid: set(times)}
 
+    def read_data(self, path):
+        raw_data = defaultdict(lambda: defaultdict(set))
 
-def read_mapping(path):
-    mapping = {}
-    if not os.path.exists(path):
-        return mapping
-    with open(path, "r", encoding="utf-8", newline="") as f:
-        r = csv.DictReader(f)
-        for row in r:
-            mapping[row["item_id"]] = row["item_name"]
-    return mapping
+        with open(path, "r", encoding="utf-8", errors="replace") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                sid = row['sequence_id']
 
+                time = int(row.get('time') or row.get('event_idx') or row.get('pos') or 0)
+                item = row['item'].strip()
+                if item:
+                    raw_data[sid][time].add(item)
 
-def read_sequences_long(path):
-    with open(path, "r", encoding="utf-8", newline="") as f:
-        r = csv.DictReader(f)
-        fieldnames = [c.strip() for c in (r.fieldnames or [])]
+        self.n_sequences = len(raw_data)
+        return raw_data
 
-        if "sequence_id" not in fieldnames:
-            raise RuntimeError("Brak kolumny sequence_id w data/sequences.csv")
+    def build_initial_idlists(self, data):
+        """Tworzy pionową bazę danych (Vertical Database) dla pojedynczych elementów."""
+        temp_idlists = defaultdict(lambda: defaultdict(set))
+        for sid, events in data.items():
+            for time, items in events.items():
+                for item in items:
+                    temp_idlists[item][sid].add(time)
 
-        pos_key = None
-        for k in POS_KEYS:
-            if k in fieldnames:
-                pos_key = k
-                break
-        if pos_key is None:
-            raise RuntimeError("Brak kolumny pozycji (np. pos / order / time) w data/sequences.csv")
+        # Filtrowanie przez min_sup
+        for item, sid_map in temp_idlists.items():
+            if len(sid_map) >= self.min_sup_count:
+                self.id_lists[item] = {sid: sorted(list(times)) for sid, times in sid_map.items()}
 
-        if "item" not in fieldnames:
-            raise RuntimeError("Brak kolumny item w data/sequences.csv")
+    def temporal_join(self, idlist1, idlist2):
+        """
+        Łączy dwie listy ID tworząc relację sekwencji (e1 następuje po e2).
+        Zwraca nową id-listę.
+        """
+        new_idlist = {}
+        for sid in idlist1:
+            if sid in idlist2:
+                times1 = idlist1[sid]
+                times2 = idlist2[sid]
 
-        by_sid = defaultdict(list)
-        for row in r:
-            sid = row["sequence_id"]
-            pos = int(row[pos_key])
-            it = row["item"].strip()
-            if not it:
-                continue
-            by_sid[sid].append((pos, it))
+                # Dla każdego zdarzenia w t1, szukamy zdarzeń w t2, które wystąpiły PÓŹNIEJ
+                # (W SPADE to jest klucz do budowania sekwencji atomowych)
+                min_t1 = times1[0]
+                valid_times2 = [t for t in times2 if t > min_t1]
 
-    sequences = []
-    for sid, events in by_sid.items():
-        events.sort(key=lambda x: x[0])
-        seq = [it for _, it in events]
-        if seq:
-            sequences.append(seq)
-    return sequences
+                if valid_times2:
+                    new_idlist[sid] = valid_times2
+        return new_idlist
 
+    def mine(self):
+        # 1-elementowe sekwencje
+        items = sorted(self.id_lists.keys())
+        for item in items:
+            self.frequent_sequences[((item,),)] = len(self.id_lists[item])
 
-def build_idlists(sequences):
-    idlists = defaultdict(lambda: defaultdict(list))
-    for sid, seq in enumerate(sequences):
-        seen = defaultdict(set)
-        for pos, it in enumerate(seq, start=1):
-            if pos not in seen[it]:
-                idlists[it][sid].append(pos)
-                seen[it].add(pos)
-    for it in idlists:
-        for sid in idlists[it]:
-            idlists[it][sid].sort()
-    return idlists
+        # DFS dla sekwencji (uproszczony na potrzeby sekwencji zdarzeń pojedynczych)
+        # Dla pełnej obsługi złożeń wewnątrz koszyków (np. {A,B} -> C)
+        # wymagana byłaby dodatkowa funkcja łączenia równoległego.
+        for item in items:
+            self._grow_sequence(((item,),), self.id_lists[item], items)
 
+    def _grow_sequence(self, prefix, prefix_idlist, items):
+        for item in items:
+            new_idlist = self.temporal_join(prefix_idlist, self.id_lists[item])
+            sup = len(new_idlist)
 
-def support_of_idlist(idlist):
-    return len(idlist)
+            if sup >= self.min_sup_count:
+                new_prefix = prefix + ((item,),)
+                self.frequent_sequences[new_prefix] = sup
+                self._grow_sequence(new_prefix, new_idlist, items)
 
-
-def temporal_join(prefix_idlist, item_idlist):
-    out = {}
-    for sid, p_positions in prefix_idlist.items():
-        i_positions = item_idlist.get(sid)
-        if not i_positions:
-            continue
-        res = []
-        j = 0
-        for pp in p_positions:
-            while j < len(i_positions) and i_positions[j] <= pp:
-                j += 1
-            if j < len(i_positions):
-                res.extend(i_positions[j:])
-        if res:
-            uniq = sorted(set(res))
-            out[sid] = uniq
-    return out
-
-
-def spade(sequences, min_sup_count, max_len=None):
-    idlists = build_idlists(sequences)
-
-    items = []
-    for it, idl in idlists.items():
-        sc = support_of_idlist(idl)
-        if sc >= min_sup_count:
-            items.append(it)
-
-    items.sort(key=item_key)
-
-    freq = {}
-    one = {}
-    for it in items:
-        one[(it,)] = idlists[it]
-        freq[(it,)] = support_of_idlist(idlists[it])
-
-    def dfs(prefix, prefix_idlist):
-        if max_len is not None and len(prefix) >= max_len:
-            return
-        for it in items:
-            new_pat = prefix + (it,)
-            joined = temporal_join(prefix_idlist, idlists[it])
-            sc = support_of_idlist(joined)
-            if sc >= min_sup_count:
-                freq[new_pat] = sc
-                dfs(new_pat, joined)
-
-    for pat, idl in one.items():
-        dfs(pat, idl)
-
-    return freq
-
-
-def write_sequences(path, seq_counts, n_sequences):
-    with open(path, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        w.writerow(["sequence", "support_count", "support"])
-        for s in sorted(seq_counts.keys(), key=lambda x: (len(x), tuple(item_key(i) for i in x))):
-            sc = seq_counts[s]
-            sup = sc / n_sequences
-            w.writerow([" -> ".join(s), sc, f"{sup:.6f}"])
-
-
-def write_sequences_human(path, seq_counts, n_sequences, mapping):
-    with open(path, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        w.writerow(["sequence_human", "support_count", "support"])
-        for s in sorted(seq_counts.keys(), key=lambda x: (len(x), tuple(item_key(i) for i in x))):
-            sc = seq_counts[s]
-            sup = sc / n_sequences
-            human = [mapping.get(it, it) for it in s]
-            w.writerow([" -> ".join(human), sc, f"{sup:.6f}"])
+    def save_results(self, out_path, mapping=None):
+        with open(out_path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(["sequence", "support_count", "support"])
+            for seq, count in self.frequent_sequences.items():
+                # Formatowanie wyjścia: (A) -> (B)
+                readable_seq = " -> ".join([f"({','.join(mapping.get(it, it) for it in iset)})" for iset in seq])
+                writer.writerow([readable_seq, count, count / self.n_sequences])
 
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--sequences", default=os.path.join(DATA_DIR, "sequences.csv"))
-    ap.add_argument("--mapping", default=os.path.join(DATA_DIR, "mapping.csv"))
-    ap.add_argument("--out-dir", default=OUT_DIR)
-    ap.add_argument("--min-sup-count", type=int, default=8)
-    ap.add_argument("--max-len", type=int, default=None)
-    args = ap.parse_args()
+    # Przykładowe użycie zgodne z Twoim pipeline
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--sequences", default="data/sequences.csv")
+    parser.add_argument("--min-sup-count", type=int, default=8)
+    parser.add_argument("--out", default="out/frequent_sequences.csv")
+    args = parser.parse_args()
 
-    os.makedirs(args.out_dir, exist_ok=True)
-
-    sequences = read_sequences_long(args.sequences)
-    mapping = read_mapping(args.mapping)
-
-    seq_counts = spade(sequences, min_sup_count=args.min_sup_count, max_len=args.max_len)
-
-    out1 = os.path.join(args.out_dir, "frequent_sequences.csv")
-    write_sequences(out1, seq_counts, len(sequences))
-
-    if mapping:
-        out2 = os.path.join(args.out_dir, "frequent_sequences_human.csv")
-        write_sequences_human(out2, seq_counts, len(sequences), mapping)
-
-    print(f"OK: znaleziono {len(seq_counts)} częstych sekwencji (min_sup_count={args.min_sup_count})")
-    print("Zapisano:", out1)
+    miner = SpadeMiner(args.min_sup_count)
+    data = miner.read_data(args.sequences)
+    miner.build_initial_idlists(data)
+    miner.mine()
+    miner.save_results(args.out, mapping={})
+    print(f"Zakończono. Znaleziono {len(miner.frequent_sequences)} sekwencji.")
 
 
 if __name__ == "__main__":
