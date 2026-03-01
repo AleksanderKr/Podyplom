@@ -87,10 +87,13 @@ class SpadeMiner:
             writer = csv.writer(f)
             writer.writerow(["sequence", "support_count", "support"])
             for seq, count in self.frequent_sequences.items():
-                # Formatowanie wyjścia: (A) -> (B)
-                readable_seq = " -> ".join([f"({','.join(mapping.get(it, it) for it in iset)})" for iset in seq])
-                writer.writerow([readable_seq, count, count / self.n_sequences])
+                formatted_itemsets = []
+                for iset in seq:
+                    sorted_items = sorted([str(mapping.get(it, it)) for it in iset])
+                    formatted_itemsets.append("{" + ",".join(sorted_items) + "}")
+                readable_seq = f"<{','.join(formatted_itemsets)}>"
 
+                writer.writerow([readable_seq, count, count / self.n_sequences])
 
 def main():
     # Przykładowe użycie zgodne z Twoim pipeline
