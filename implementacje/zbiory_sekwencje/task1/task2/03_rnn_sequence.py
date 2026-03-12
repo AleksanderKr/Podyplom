@@ -32,7 +32,8 @@ class SetLSTMModel(nn.Module):
     def __init__(self, vocab_size, embed_dim, hidden_dim):
         super(SetLSTMModel, self).__init__()
         self.embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=0)
-        self.lstm = nn.LSTM(embed_dim, hidden_dim, batch_first=True)
+        self.lstm = nn.LSTM(embed_dim, hidden_dim, batch_first=True, dropout=0.2, num_layers=2)
+        self.ln = nn.LayerNorm(hidden_dim)
         self.fc = nn.Linear(hidden_dim, vocab_size)
 
     def forward(self, x_lists, vocab, device):
@@ -43,18 +44,57 @@ class SetLSTMModel(nn.Module):
             for w in range(window_size):
                 item_ids = torch.tensor([vocab.get(it, 0) for it in x_lists[b][w]]).to(device)
                 embeds = self.embedding(item_ids)
-                final_input[b, w, :] = embeds.sum(dim=0)
+                final_input[b, w, :] = embeds.mean(dim=0)
+
         out, _ = self.lstm(final_input)
-        return self.fc(out[:, -1, :])
+        out = self.ln(out[:, -1, :])
+        return self.fc(out)
+
+
+def extract_frequent_sequences(model, vocab, inv_vocab, device, threshold, max_len=3):
+    frequent_sequences = []
+    initial_items = [k for k in vocab.keys() if k != '<PAD>']
+
+    for start_item in initial_items:
+        current_seq = [[start_item]]
+        explore_queue = [current_seq]
+
+        while explore_queue:
+            seq = explore_queue.pop(0)
+
+            if len(seq) > 1:
+                frequent_sequences.append(seq)
+
+            if len(seq) >= max_len:
+                continue
+
+            test_tensor = [seq]
+            logits = model(test_tensor, vocab, device)
+            probs = torch.sigmoid(logits)
+
+            next_items = []
+            for i in range(len(inv_vocab)):
+                prob = probs[0][i].item()
+                if prob >= threshold and inv_vocab[i] != '<PAD>':
+                    next_items.append(inv_vocab[i])
+
+            if next_items:
+                next_items.sort()
+                new_seq = seq.copy()
+                new_seq.append(next_items)
+                explore_queue.append(new_seq)
+
+    return frequent_sequences
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--sequences", default="data/sequences_test.csv")
-    parser.add_argument("--epochs", type=int, default=100)
-    parser.add_argument("--batch", type=int, default=2)
+    parser.add_argument("--epochs", type=int, default=150)
+    parser.add_argument("--batch", type=int, default=4)
     parser.add_argument("--window", type=int, default=1)
-    parser.add_argument("--threshold", type=float, default=0.3)
+    parser.add_argument("--threshold", type=float, default=0.35)
+    parser.add_argument("--max_len", type=int, default=3)
     args = parser.parse_args()
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -71,9 +111,9 @@ def main():
     dataset = MultiLabelSequenceDataset(sequences, vocab, window_size=args.window)
     loader = DataLoader(dataset, batch_size=args.batch, shuffle=True, collate_fn=lambda x: zip(*x))
 
-    model = SetLSTMModel(len(vocab), 32, 64).to(device)
+    model = SetLSTMModel(len(vocab), 64, 128).to(device)
     criterion = nn.BCEWithLogitsLoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.01)
+    optimizer = optim.Adam(model.parameters(), lr=0.005)
 
     model.train()
     for epoch in range(args.epochs):
@@ -86,27 +126,19 @@ def main():
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
-        if (epoch + 1) % 10 == 0:
-            print(f"Epoch {epoch + 1}/{args.epochs}, Loss: {epoch_loss / len(loader):.4f}")
 
     model.eval()
     with torch.no_grad():
-        test_input = [[30]]
-        test_tensor = [test_input]
-        logits = model(test_tensor, vocab, device)
-        probs = torch.sigmoid(logits)
+        print(f"\n--- Wyekstrahowane częste sekwencje (Próg prawdopodobieństwa >= {args.threshold}) ---")
+        extracted_seqs = extract_frequent_sequences(model, vocab, inv_vocab, device, args.threshold, args.max_len)
 
-        print(f"\nWejście: {test_input}")
-        results = []
-        for i in range(len(inv_vocab)):
-            prob = probs[0][i].item()
-            if prob > args.threshold and inv_vocab[i] != '<PAD>':
-                results.append((inv_vocab[i], prob))
-
-        results.sort(key=lambda x: x[1], reverse=True)
-        print(f"Przewidziany zbiór (P > {args.threshold}):")
-        for item, p in results:
-            print(f"  - Lek ID: {item} (P: {p:.4f})")
+        if not extracted_seqs:
+            print("Brak sekwencji spełniających podany próg.")
+        else:
+            for seq in extracted_seqs:
+                formatted_seq = " -> ".join(
+                    [str(itemset) if isinstance(itemset, list) else f"[{itemset}]" for itemset in seq])
+                print(f"Sekwencja: {formatted_seq}")
 
 
 if __name__ == "__main__":

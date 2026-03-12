@@ -50,3 +50,17 @@ aprioriall:
 
 
     
+
+
+01.03.2026
+    Drzewa decyzyjne:
+    id3
+
+
+
+08.03.2026:
+
+program:
+    zbiory
+    sekwencje
+    klasyfikacja
