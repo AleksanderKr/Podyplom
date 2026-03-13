@@ -63,4 +63,4 @@ aprioriall:
 program:
     zbiory
     sekwencje
-    klasyfikacja
+    klasyfikacja; id3, c4.5
