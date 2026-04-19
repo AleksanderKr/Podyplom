@@ -1,2 +1,0 @@
-0,no,False.
-1,yes,True.

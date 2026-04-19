@@ -1,0 +1,81 @@
+17.01:
+fpgrow (grafowe) - nie wiem do czego, ale pewnie sie przyda.
+PRE-PIERWSZE ZADANIE ( wsumie nie zadanie tylko to ja mam przygotwać dane): apriori set - rozszerzyć go tak by miał ze 150 k kategorii zmaiast 13 i wgl duży ma być - te numery to tak orientacyjnie mają być
+
+wyniki po uruchomieniu apriori: drugi skrypt do ponownego mapowania np. i1 to cola, i2 to bułki (na rzeczywiste produkty) - teoretyczny dyskonnt spożywcyz - są chyba jakieś pliki do tego coś gadał, może w internecie - poszukać biblioteki 
+    albo czegoś co pozwoli zmapować dane na brzmiące realnie / zrozumiale dla człowieka
+do działania algorymtu pewnie lepiej na dane symboliczne a po wyniku z powrotem na czytelne dla ludzi dane
+
+PIERWSZE ZADANIE: odkrywanie częstych zbiorów i tworzenie reguł asocjacyjnych
+
+confidence sie nie używa tylko lifta w kontekscie reguł asocjacyjnych
+
+
+reguły opisać trzema miarami, najważniejszymi: confidence, lift, support
+
+
+drugi skrypt po odkrytych czestych ziborach, który na wejściu dostanie te odkryte zbiory i wygeneruje reguły asocjacyjne - DRUGIE ZADANIE
+
+
+
+25.02:
+poprzednik->następnik do reguł asoc
+wizualizacje reguł asocjacyjnych
+FP-growth
+
+zrobić ten sam zbiór co jest w pdfie tzn. na zajęciach
+
+
+    zadanie 1. wersja apriori all?? Da mi materiały
+3 zadanie: częste sekwencje - alg. Spade
+
+
+01.02:
+apriori: id transakcji, transakcje
+aprioriall:
+    dane: aprioriAll, (ma jeszce czynnik czasu)
+
+    różnica: jeśli jest ilosć klientów, to on po pierwsze: sortuje dane (tracimy sekewncyjność)
+        (sortowanie leksykograficzne), wszytkie transakcje są jakby wystąpiły w jednym czasie
+
+        uogólniony - dlatego, że pomimo czynnika czasu, przyjmuje się równe odstępy czasowe pomiędzy
+        sekwencjami - robi się znacnzik czasowy (t1; t2; t3), dane można wygenerować (albo same te znaczniki)
+
+        czym się różni sekwencja: sposób zapisu w częstych zbiorach {} - koenicznie tne nawias!
+        i zawsze w porządku leksykograficznym!
+        np: {a,b,c,d}:5
+
+    sekwencje: symbolika <  >
+    mówi sie o wyrazach sekwencji czyli {}, ALE przyjęło się pisać ()
+
+
+    
+
+
+01.03.2026
+    Drzewa decyzyjne:
+    id3
+
+
+
+08.03.2026:
+
+program:
+    zbiory
+    sekwencje
+    klasyfikacja; id3, c4.5
+
+    22.03.2026: z drzewa zrobić reguły asocjacyjne
+    
+    reguły dać też do SoftwareX
+    
+
+    dodać: listingi do aprioriAll w 2.3
+        sekwnecyjne reguły asoc skrypcik - to na po recenzjach
+
+
+
+
+
+
+
