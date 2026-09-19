@@ -6,6 +6,86 @@ import importlib
 visualize = importlib.import_module("04_visualize")
 
 def entropy(target_col):
+    probabilities = target_col.value_counts(normalize=True)
+    return -np.sum(probabilities * np.log2(probabilities))
+
+def info_gain(data, split_attribute_name, target_name="class"):
+    total_entropy = entropy(data[target_name])
+    total_len = len(data)
+    
+    weighted_entropy = sum(
+        (len(subset) / total_len) * entropy(subset[target_name])
+        for _, subset in data.groupby(split_attribute_name)
+    )
+        
+    return total_entropy - weighted_entropy
+
+def id3(data, original_data, features, target_attribute_name="class", parent_node_class=None):
+    if data.empty:
+        return parent_node_class
+
+    if data[target_attribute_name].nunique() == 1:
+        return data[target_attribute_name].iloc[0]
+
+    if not features:
+        return parent_node_class
+
+    parent_node_class = data[target_attribute_name].mode()[0]
+
+    best_feature = max(features, key=lambda f: info_gain(data, f, target_attribute_name))
+
+    tree = {best_feature: {}}
+    remaining_features = [f for f in features if f != best_feature]
+
+    for value in original_data[best_feature].unique():
+        sub_data = data[data[best_feature] == value]
+        tree[best_feature][value] = id3(sub_data, original_data, remaining_features, target_attribute_name, parent_node_class)
+
+    return tree
+
+def print_tree(tree, indent=""):
+    if not isinstance(tree, dict):
+        print(f" -> {tree}")
+        return
+
+    for attribute, branches in tree.items():
+        for value, subtree in branches.items():
+            print(f"{indent}[{attribute}: {value}]", end="")
+            if isinstance(subtree, dict):
+                print()
+                print_tree(subtree, indent + "  ")
+            else:
+                print(f" -> {subtree}")
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--data", required=True)
+    parser.add_argument("--target", required=True)
+    args = parser.parse_args()
+
+    df = pd.read_csv(args.data)
+    features = df.columns.tolist()
+    
+    if args.target in features:
+        features.remove(args.target)
+    else:
+        print(f"Error: Target column '{args.target}' does not exist in the dataset.")
+        return
+
+    tree = id3(df, df, features, args.target)
+
+    print_tree(tree)
+    visualize.plot_tree(tree, title=f"ID3 Tree - {args.data}")
+
+if __name__ == "__main__":
+    main()import pandas as pd
+import numpy as np
+import argparse
+import importlib
+
+visualize = importlib.import_module("04_visualize")
+
+def entropy(target_col):
     _, counts = np.unique(target_col, return_counts=True)
     probabilities = counts / counts.sum()
     entropy_val = -np.sum(probabilities * np.log2(probabilities))
