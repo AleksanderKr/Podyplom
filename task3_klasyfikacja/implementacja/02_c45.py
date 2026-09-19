@@ -7,17 +7,28 @@ visualize = importlib.import_module("04_visualize")
 
 def entropy(target_col):
     elements, counts = np.unique(target_col, return_counts=True)
-    return np.sum([(-counts[i] / np.sum(counts)) * np.log2(counts[i] / np.sum(counts)) for i in range(len(elements))])
+    total = np.sum(counts)
+    if total == 0:
+        return 0
+    probs = counts / total
+    return -np.sum(probs * np.log2(probs + 1e-9))
 
 def calculate_discrete_gain_ratio(data, attribute_name, target_name):
     total_entropy = entropy(data[target_name])
     vals, counts = np.unique(data[attribute_name], return_counts=True)
+    total_counts = np.sum(counts)
+
+    if total_counts == 0:
+        return 0, None
 
     weighted_entropy = np.sum(
-        [(counts[i] / np.sum(counts)) * entropy(data[data[attribute_name] == vals[i]][target_name])
-         for i in range(len(vals))])
+        [(counts[i] / total_counts) * entropy(data[data[attribute_name] == vals[i]][target_name])
+         for i in range(len(vals))]
+    )
     information_gain = total_entropy - weighted_entropy
-    split_info = np.sum([(-counts[i] / np.sum(counts)) * np.log2(counts[i] / np.sum(counts)) for i in range(len(vals))])
+    
+    probs = counts / total_counts
+    split_info = -np.sum(probs * np.log2(probs + 1e-9))
 
     if split_info == 0:
         return 0, None
@@ -40,11 +51,11 @@ def calculate_continuous_gain_ratio(data, attribute_name, target_name):
         if n_left == 0 or n_right == 0:
             continue
 
-        weighted_entropy = (n_left / n_total) * entropy(left_split[target_name]) + (n_right / n_total) * entropy(
-            right_split[target_name])
+        weighted_entropy = (n_left / n_total) * entropy(left_split[target_name]) + (n_right / n_total) * entropy(right_split[target_name])
         information_gain = total_entropy - weighted_entropy
-        split_info = -(
-                (n_left / n_total) * np.log2(n_left / n_total) + (n_right / n_total) * np.log2(n_right / n_total))
+        
+        p_left, p_right = n_left / n_total, n_right / n_total
+        split_info = -(p_left * np.log2(p_left + 1e-9) + p_right * np.log2(p_right + 1e-9))
 
         if split_info != 0:
             gain_ratio = information_gain / split_info
@@ -58,15 +69,18 @@ def is_continuous(data, attribute_name):
     return pd.api.types.is_numeric_dtype(data[attribute_name])
 
 def build_tree(data, original_data, features, target_name="class", parent_node_class=None):
+    if len(data) == 0:
+        vals, counts = np.unique(original_data[target_name], return_counts=True)
+        return vals[np.argmax(counts)]
+    
     if len(np.unique(data[target_name])) <= 1:
         return np.unique(data[target_name])[0]
-    elif len(data) == 0:
-        return np.unique(original_data[target_name])[
-            np.argmax(np.unique(original_data[target_name], return_counts=True)[1])]
-    elif len(features) == 0:
+    
+    if len(features) == 0:
         return parent_node_class
 
-    parent_node_class = np.unique(data[target_name])[np.argmax(np.unique(data[target_name], return_counts=True)[1])]
+    vals, counts = np.unique(data[target_name], return_counts=True)
+    parent_node_class = vals[np.argmax(counts)]
 
     best_gain_ratio = -1
     best_feature, best_threshold = None, None
@@ -88,18 +102,15 @@ def build_tree(data, original_data, features, target_name="class", parent_node_c
         node_name = f"{best_feature}"
         tree[node_name] = {}
         left_data = data[data[best_feature] <= best_threshold]
-        tree[node_name][f"<= {best_threshold}"] = build_tree(left_data, original_data, features, target_name,
-                                                             parent_node_class)
         right_data = data[data[best_feature] > best_threshold]
-        tree[node_name][f"> {best_threshold}"] = build_tree(right_data, original_data, features, target_name,
-                                                            parent_node_class)
+        tree[node_name][f"<= {best_threshold}"] = build_tree(left_data, original_data, features, target_name, parent_node_class)
+        tree[node_name][f"> {best_threshold}"] = build_tree(right_data, original_data, features, target_name, parent_node_class)
     else:
         tree[best_feature] = {}
         remaining_features = [f for f in features if f != best_feature]
-        for value in np.unique(data[best_feature]):
+        for value in np.unique(original_data[best_feature]):
             sub_data = data[data[best_feature] == value]
-            tree[best_feature][value] = build_tree(sub_data, original_data, remaining_features, target_name,
-                                                   parent_node_class)
+            tree[best_feature][value] = build_tree(sub_data, original_data, remaining_features, target_name, parent_node_class)
 
     return tree
 
@@ -113,9 +124,20 @@ def calculate_pep_error(errors, total, z=0.69):
     return upper_bound_rate * total
 
 def get_majority_class(data, target_name):
-    if len(data) == 0: return None
+    if len(data) == 0:
+        return None
     vals, counts = np.unique(data[target_name], return_counts=True)
     return vals[np.argmax(counts)]
+
+def get_subset(data, feature, key):
+    if isinstance(key, str) and key.startswith("<= "):
+        threshold = float(key.split("<= ")[1])
+        return data[data[feature] <= threshold]
+    elif isinstance(key, str) and key.startswith("> "):
+        threshold = float(key.split("> ")[1])
+        return data[data[feature] > threshold]
+    else:
+        return data[data[feature] == key]
 
 def post_prune(tree, data, target_name):
     if not isinstance(tree, dict) or len(data) == 0:
@@ -125,15 +147,7 @@ def post_prune(tree, data, target_name):
     branches = tree[feature]
 
     for key, subtree in branches.items():
-        if isinstance(key, str) and key.startswith("<="):
-            threshold = float(key.split(" ")[1])
-            sub_data = data[data[feature] <= threshold]
-        elif isinstance(key, str) and key.startswith(">"):
-            threshold = float(key.split(" ")[1])
-            sub_data = data[data[feature] > threshold]
-        else:
-            sub_data = data[data[feature] == key]
-
+        sub_data = get_subset(data, feature, key)
         branches[key] = post_prune(subtree, sub_data, target_name)
 
     majority_class = get_majority_class(data, target_name)
@@ -147,16 +161,8 @@ def post_prune(tree, data, target_name):
         if isinstance(subtree, dict):
             is_all_leaves = False
             break
-
-        if isinstance(key, str) and key.startswith("<="):
-            threshold = float(key.split(" ")[1])
-            sub_data = data[data[feature] <= threshold]
-        elif isinstance(key, str) and key.startswith(">"):
-            threshold = float(key.split(" ")[1])
-            sub_data = data[data[feature] > threshold]
-        else:
-            sub_data = data[data[feature] == key]
-
+        
+        sub_data = get_subset(data, feature, key)
         child_errors = len(sub_data[sub_data[target_name] != subtree]) if len(sub_data) > 0 else 0
         split_pep_error += calculate_pep_error(child_errors, len(sub_data))
 
