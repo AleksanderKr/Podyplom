@@ -5,10 +5,10 @@ Loads a CSV file, optionally holds out a test set, builds ID3 and/or C4.5
 trees, prints them with their size and accuracy and saves the drawings in out/.
 
 Examples:
-    python run_pipeline.py --data data/spacer.csv --target Spacer
-    python run_pipeline.py --data data/spacer_liczbowy.csv --target Spacer --algo c45
-    python run_pipeline.py --data data/play_tennis.csv --target Play --exclude Day
-    python run_pipeline.py --data data/my.csv --target class --test-size 0.3 --seed 1
+    python run_pipeline.py                                   # Play Tennis (numeric), ID3 + C4.5
+    python run_pipeline.py --data data/play_tennis.csv --algo id3
+    python run_pipeline.py --data data/play_tennis_missing.csv --algo c45
+    python run_pipeline.py --data data/my.csv --target class --exclude id --test-size 0.3
 """
 
 import argparse
@@ -29,11 +29,10 @@ def load_data(path, target, exclude):
     if not os.path.exists(path):
         sys.exit(f"Error: file {path} not found.")
     df = pd.read_csv(path, na_values=["?"], skipinitialspace=True)
-    unknown = [c for c in [target, *exclude] if c not in df.columns]
-    if unknown:
-        sys.exit(f"Error: columns {unknown} not in {list(df.columns)}.")
+    if target not in df.columns:
+        sys.exit(f"Error: target column '{target}' not in {list(df.columns)}.")
 
-    df = df.drop(columns=exclude)
+    df = df.drop(columns=[c for c in exclude if c in df.columns])
     unlabeled = int(df[target].isna().sum())
     if unlabeled:
         print(f"note: {unlabeled} row(s) without a class label removed")
@@ -71,11 +70,11 @@ def report(name, tree, predict, train, test, target, out_path, show):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description="ID3 / C4.5 decision trees")
-    ap.add_argument("--data", default="data/spacer.csv")
-    ap.add_argument("--target", default="Spacer")
+    ap.add_argument("--data", default="data/play_tennis_numeric.csv")
+    ap.add_argument("--target", default="Play")
     ap.add_argument("--algo", choices=["id3", "c45", "both"], default="both")
-    ap.add_argument("--exclude", nargs="*", default=[],
-                    help="columns to ignore, e.g. row identifiers (--exclude Day)")
+    ap.add_argument("--exclude", nargs="*", default=["Day"],
+                    help="columns to ignore if present, e.g. row identifiers (default: Day)")
     ap.add_argument("--test-size", type=float, default=0.0,
                     help="fraction of rows held out for testing (0 = train on all)")
     ap.add_argument("--seed", type=int, default=42)
