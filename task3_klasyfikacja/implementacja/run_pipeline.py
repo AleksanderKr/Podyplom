@@ -1,32 +1,116 @@
+"""
+Experiment pipeline for the decision-tree lab.
+
+Loads a CSV file, optionally holds out a test set, builds ID3 and/or C4.5
+trees, prints them with their size and accuracy and saves the drawings in out/.
+
+Examples:
+    python run_pipeline.py --data data/spacer.csv --target Spacer
+    python run_pipeline.py --data data/spacer_liczbowy.csv --target Spacer --algo c45
+    python run_pipeline.py --data data/play_tennis.csv --target Play --exclude Day
+    python run_pipeline.py --data data/my.csv --target class --test-size 0.3 --seed 1
+"""
+
 import argparse
-import subprocess
-import sys
+import importlib
 import os
+import sys
+
+import pandas as pd
+
+id3 = importlib.import_module("01_id3")
+c45 = importlib.import_module("02_c45")
+viz = importlib.import_module("04_visualize")
 
 
-def run(cmd):
-    print(">", " ".join(cmd))
-    subprocess.check_call(cmd)
+def load_data(path, target, exclude):
+    """Read a CSV file ("?" and empty cells are missing values), drop excluded
+    columns (e.g. row identifiers) and rows without a class label."""
+    if not os.path.exists(path):
+        sys.exit(f"Error: file {path} not found.")
+    df = pd.read_csv(path, na_values=["?"], skipinitialspace=True)
+    unknown = [c for c in [target, *exclude] if c not in df.columns]
+    if unknown:
+        sys.exit(f"Error: columns {unknown} not in {list(df.columns)}.")
+
+    df = df.drop(columns=exclude)
+    unlabeled = int(df[target].isna().sum())
+    if unlabeled:
+        print(f"note: {unlabeled} row(s) without a class label removed")
+    return df[df[target].notna()].reset_index(drop=True)
 
 
-def main():
-    ap = argparse.ArgumentParser()
+def train_test_split(df, test_size, seed):
+    if test_size <= 0:
+        return df, None
+    test = df.sample(frac=test_size, random_state=seed)
+    return df.drop(test.index), test
+
+
+def accuracy(predict, tree, data, target):
+    if data is None or data.empty:
+        return None
+    predictions = pd.Series(predict(tree, data), index=data.index)
+    return float((predictions == data[target]).mean())
+
+
+def report(name, tree, predict, train, test, target, out_path, show):
+    print(f"\n=== {name} ===")
+    viz.print_tree(tree)
+    stats = viz.tree_stats(tree)
+    line = (f"internal nodes: {stats['internal']}, leaves: {stats['leaves']}, "
+            f"depth: {stats['depth']}, "
+            f"train accuracy: {accuracy(predict, tree, train, target):.3f}")
+    test_acc = accuracy(predict, tree, test, target)
+    if test_acc is not None:
+        line += f", test accuracy: {test_acc:.3f}"
+    print(line)
+    viz.plot_tree(tree, title=name, path=out_path, show=show)
+    print(f"saved: {out_path}")
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description="ID3 / C4.5 decision trees")
     ap.add_argument("--data", default="data/spacer.csv")
     ap.add_argument("--target", default="Spacer")
     ap.add_argument("--algo", choices=["id3", "c45", "both"], default="both")
-    args = ap.parse_args()
+    ap.add_argument("--exclude", nargs="*", default=[],
+                    help="columns to ignore, e.g. row identifiers (--exclude Day)")
+    ap.add_argument("--test-size", type=float, default=0.0,
+                    help="fraction of rows held out for testing (0 = train on all)")
+    ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--cf", type=float, default=0.25,
+                    help="C4.5 pruning confidence factor (smaller = more pruning)")
+    ap.add_argument("--min-cases", type=float, default=1,
+                    help="C4.5: minimum (weighted) rows in at least two branches")
+    ap.add_argument("--out", default="out")
+    ap.add_argument("--show", action="store_true", help="also open plot windows")
+    args = ap.parse_args(argv)
 
-    py = sys.executable
+    df = load_data(args.data, args.target, args.exclude)
+    train, test = train_test_split(df, args.test_size, args.seed)
+    features = [c for c in df.columns if c != args.target]
+    name = os.path.splitext(os.path.basename(args.data))[0]
+    print(f"data: {args.data} | rows: {len(df)} (train {len(train)}, "
+          f"test {0 if test is None else len(test)}) | target: {args.target} | "
+          f"attributes: {features}")
 
-    if not os.path.exists(args.data):
-        print(f"Error: File {args.data} not found.")
-        sys.exit(1)
+    if args.algo in ("id3", "both"):
+        try:
+            tree = id3.fit(train, args.target, features)
+            report(f"ID3 - {name}", tree, id3.predict, train, test, args.target,
+                   os.path.join(args.out, f"{name}_id3.png"), args.show)
+        except ValueError as err:
+            print(f"\n=== ID3 - {name} ===\nskipped: {err}")
 
-    if args.algo in ["id3", "both"]:
-        run([py, "01_id3.py", "--data", args.data, "--target", args.target])
-
-    if args.algo in ["c45", "both"]:
-        run([py, "02_c45.py", "--data", args.data, "--target", args.target])
+    if args.algo in ("c45", "both"):
+        raw, pruned = c45.fit(train, args.target, features,
+                              min_cases=args.min_cases, cf=args.cf)
+        report(f"C4.5 before pruning - {name}", raw, c45.predict, train, test,
+               args.target, os.path.join(args.out, f"{name}_c45_unpruned.png"), args.show)
+        report(f"C4.5 after pruning (CF={args.cf}) - {name}", pruned, c45.predict,
+               train, test, args.target,
+               os.path.join(args.out, f"{name}_c45_pruned.png"), args.show)
 
 
 if __name__ == "__main__":

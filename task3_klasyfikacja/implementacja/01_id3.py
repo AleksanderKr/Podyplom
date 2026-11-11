@@ -1,173 +1,150 @@
+"""
+ID3 decision tree (Quinlan, 1986).
+
+The algorithm in one sentence: at every node pick the attribute with the
+highest information gain, split the data on *every* value of that attribute,
+and repeat recursively until the node is pure or no attributes are left.
+
+Assumptions of classic ID3 (kept on purpose, they are discussed in the lab):
+  * every attribute is treated as categorical - a numeric column is split
+    into one branch per distinct number (see Task 1 in the lab script),
+  * there are no missing values (use C4.5 or clean the data first),
+  * there is no pruning.
+
+Tree representation (shared with 02_c45.py and 04_visualize.py):
+  leaf: {"type": "leaf", "label": <class>, "counts": {<class>: <n>, ...}}
+  node: {"type": "node", "feature": <attribute>, "threshold": None,
+         "label": <majority class>, "counts": {...},
+         "branches": {<value>: <subtree>, ...}}
+"""
+
+import numpy as np
 import pandas as pd
-import numpy as np
-import argparse
-import importlib
 
-visualize = importlib.import_module("04_visualize")
 
-def entropy(target_col):
-    probabilities = target_col.value_counts(normalize=True)
-    return -np.sum(probabilities * np.log2(probabilities))
+# ---------------------------------------------------------------------------
+# Measures
+# ---------------------------------------------------------------------------
 
-def info_gain(data, split_attribute_name, target_name="class"):
-    total_entropy = entropy(data[target_name])
-    total_len = len(data)
-    
-    weighted_entropy = sum(
-        (len(subset) / total_len) * entropy(subset[target_name])
-        for _, subset in data.groupby(split_attribute_name)
+def entropy(labels):
+    """Shannon entropy H(S) = -sum p_i * log2(p_i) of a column of class labels.
+    Only positive p_i are used (0 log 0 = 0); an empty set has entropy 0."""
+    p = labels.value_counts(normalize=True)
+    p = p[p > 0]
+    if p.empty:
+        return 0.0
+    return float(-(p * np.log2(p)).sum())
+
+
+def information_gain(data, feature, target):
+    """Gain(S, A) = H(S) - sum |S_v|/|S| * H(S_v) over the values v of A."""
+    n = len(data)
+    remainder = sum(
+        len(subset) / n * entropy(subset[target])
+        for _, subset in data.groupby(feature)
     )
-        
-    return total_entropy - weighted_entropy
+    return entropy(data[target]) - remainder
 
-def id3(data, original_data, features, target_attribute_name="class", parent_node_class=None):
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def majority_class(labels):
+    """Most frequent class; ties are broken by the sorted class order."""
+    return labels.mode().iloc[0]
+
+
+def class_counts(labels):
+    return {cls: int(n) for cls, n in labels.value_counts().sort_index().items()}
+
+
+def make_leaf(label, labels):
+    return {"type": "leaf", "label": label, "counts": class_counts(labels)}
+
+
+# ---------------------------------------------------------------------------
+# Learning
+# ---------------------------------------------------------------------------
+
+def build_tree(data, target, features, domains, parent_label=None):
+    """Recursive ID3.
+
+    data         - training rows that reached this node
+    features     - attributes still available on this path
+    domains      - {attribute: all values seen in the full training set};
+                   a branch is created for every value, even if no row
+                   reaches it here (such a leaf gets the parent's majority)
+    parent_label - majority class of the parent node
+    """
+    # 1. No rows reached this branch -> use the parent's majority class.
     if data.empty:
-        return parent_node_class
+        return make_leaf(parent_label, data[target])
 
-    if data[target_attribute_name].nunique() == 1:
-        return data[target_attribute_name].iloc[0]
+    label = majority_class(data[target])
 
-    if not features:
-        return parent_node_class
+    # 2. Pure node or no attributes left -> leaf with the majority class.
+    if data[target].nunique() == 1 or not features:
+        return make_leaf(label, data[target])
 
-    parent_node_class = data[target_attribute_name].mode()[0]
+    # 3. Choose the attribute with the highest information gain.
+    #    (max() returns the first one on ties, i.e. column order decides.)
+    best = max(features, key=lambda f: information_gain(data, f, target))
 
-    best_feature = max(features, key=lambda f: info_gain(data, f, target_attribute_name))
+    node = {
+        "type": "node",
+        "feature": best,
+        "threshold": None,
+        "label": label,
+        "counts": class_counts(data[target]),
+        "branches": {},
+    }
 
-    tree = {best_feature: {}}
-    remaining_features = [f for f in features if f != best_feature]
+    # 4. One branch per value; the used attribute is removed on this path.
+    remaining = [f for f in features if f != best]
+    for value in domains[best]:
+        subset = data[data[best] == value]
+        node["branches"][value] = build_tree(subset, target, remaining, domains, label)
 
-    for value in original_data[best_feature].unique():
-        sub_data = data[data[best_feature] == value]
-        tree[best_feature][value] = id3(sub_data, original_data, remaining_features, target_attribute_name, parent_node_class)
+    return node
 
-    return tree
 
-def print_tree(tree, indent=""):
-    if not isinstance(tree, dict):
-        print(f" -> {tree}")
-        return
+def fit(data, target, features=None):
+    """Build an ID3 tree from a DataFrame."""
+    if features is None:
+        features = [c for c in data.columns if c != target]
 
-    for attribute, branches in tree.items():
-        for value, subtree in branches.items():
-            print(f"{indent}[{attribute}: {value}]", end="")
-            if isinstance(subtree, dict):
-                print()
-                print_tree(subtree, indent + "  ")
-            else:
-                print(f" -> {subtree}")
+    missing = [c for c in features + [target] if data[c].isna().any()]
+    if missing:
+        raise ValueError(
+            f"ID3 does not handle missing values (columns: {missing}). "
+            "Clean the data or use C4.5."
+        )
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--data", required=True)
-    parser.add_argument("--target", required=True)
-    args = parser.parse_args()
+    domains = {f: sorted(data[f].unique().tolist(), key=str) for f in features}
+    return build_tree(data, target, list(features), domains)
 
-    df = pd.read_csv(args.data)
-    features = df.columns.tolist()
-    
-    if args.target in features:
-        features.remove(args.target)
-    else:
-        print(f"Error: Target column '{args.target}' does not exist in the dataset.")
-        return
 
-    tree = id3(df, df, features, args.target)
+# ---------------------------------------------------------------------------
+# Prediction
+# ---------------------------------------------------------------------------
 
-    print_tree(tree)
-    visualize.plot_tree(tree, title=f"ID3 Tree - {args.data}")
+def predict_one(tree, row):
+    node = tree
+    while node["type"] == "node":
+        value = row[node["feature"]]
+        if value not in node["branches"]:   # value never seen in training
+            return node["label"]
+        node = node["branches"][value]
+    return node["label"]
 
-if __name__ == "__main__":
-    main()import pandas as pd
-import numpy as np
-import argparse
-import importlib
 
-visualize = importlib.import_module("04_visualize")
+def predict(tree, data):
+    return [predict_one(tree, row) for _, row in data.iterrows()]
 
-def entropy(target_col):
-    _, counts = np.unique(target_col, return_counts=True)
-    probabilities = counts / counts.sum()
-    entropy_val = -np.sum(probabilities * np.log2(probabilities))
-    return entropy_val
-
-def info_gain(data, split_attribute_name, target_name="class"):
-    total_entropy = entropy(data[target_name])
-    vals, counts = np.unique(data[split_attribute_name], return_counts=True)
-    
-    weighted_entropy = 0
-    total_counts = np.sum(counts)
-    
-    for i, val in enumerate(vals):
-        subset = data[data[split_attribute_name] == val]
-        weight = counts[i] / total_counts
-        weighted_entropy += weight * entropy(subset[target_name])
-        
-    information_gain = total_entropy - weighted_entropy
-    return information_gain
-
-def id3(data, original_data, features, target_attribute_name="class", parent_node_class=None):
-    if len(data) == 0:
-        return parent_node_class
-
-    unique_classes = np.unique(data[target_attribute_name])
-    if len(unique_classes) <= 1:
-        return unique_classes[0]
-
-    if len(features) == 0:
-        return parent_node_class
-
-    target_vals, target_counts = np.unique(data[target_attribute_name], return_counts=True)
-    parent_node_class = target_vals[np.argmax(target_counts)]
-
-    item_values = [info_gain(data, feature, target_attribute_name) for feature in features]
-    best_feature_index = np.argmax(item_values)
-    best_feature = features[best_feature_index]
-
-    tree = {best_feature: {}}
-    
-    remaining_features = [f for f in features if f != best_feature]
-
-    for value in np.unique(original_data[best_feature]):
-        sub_data = data[data[best_feature] == value]
-        subtree = id3(sub_data, original_data, remaining_features, target_attribute_name, parent_node_class)
-        tree[best_feature][value] = subtree
-
-    return tree
-
-def print_tree(tree, indent=""):
-    if not isinstance(tree, dict):
-        print(f" -> {tree}")
-        return
-
-    for attribute, branches in tree.items():
-        for value, subtree in branches.items():
-            print(f"{indent}[{attribute}: {value}]", end="")
-            if isinstance(subtree, dict):
-                print()
-                print_tree(subtree, indent + "  ")
-            else:
-                print(f" -> {subtree}")
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--data", required=True)
-    parser.add_argument("--target", required=True)
-    args = parser.parse_args()
-
-    df = pd.read_csv(args.data)
-    features = df.columns.tolist()
-    
-    if args.target in features:
-        features.remove(args.target)
-    else:
-        print(f"Błąd: Kolumna docelowa '{args.target}' nie istnieje w danych.")
-        return
-
-    tree = id3(df, df, features, args.target)
-
-    print_tree(tree)
-    visualize.plot_tree(tree, title=f"ID3 Tree - {args.data}")
 
 if __name__ == "__main__":
-    main()
+    # Same CLI as before: python 01_id3.py --data data/spacer.csv --target Spacer
+    import sys
+    import run_pipeline
+    run_pipeline.main(["--algo", "id3", *sys.argv[1:]])
